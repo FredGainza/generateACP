@@ -1,15 +1,14 @@
 from setuptools import setup
+
+with open("README.md", "r") as readme_file:
+    readme = readme_file.read()
+
+requirements = ["pandas", "numpy", "scikit-learn", "matplotlib", "jupyter", "adjustText"]
+
 setup(
     name='generate-acp-test11',
     packages_dir={"": "src"},
-    install_requires=[
-        "pandas >= 1.5.1",
-        "numpy >= 1.23.5",
-        "scikit-learn >= 1.1.3",
-        "matplotlib >= 3.6.2",
-        "jupyter >= 1.0.0",
-        "adjustText >= 0.7.3"
-    ],
+    install_requires=requirements,
     version='0.1.0',
     description='Génréation des données et des graphiques d\'une Analyse en Composantes Principales ACP',
     author='Frédéric Gainza',
