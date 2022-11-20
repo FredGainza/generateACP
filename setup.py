@@ -6,8 +6,8 @@ with open("README.md", "r") as readme_file:
 requirements = ["pandas", "numpy", "scikit-learn", "matplotlib", "jupyter", "adjustText"]
 
 setup(
-    name='generate-acp-test11',
-    packages_dir={"": "src"},
+    name='generate-acp',
+    packages_dir=["generate-acp"]},
     install_requires=requirements,
     version='0.1.0',
     description='Génréation des données et des graphiques d\'une Analyse en Composantes Principales ACP',
