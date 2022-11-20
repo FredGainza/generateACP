@@ -13,89 +13,6 @@ from math import floor
 import os
 
 
-def C(k, n):
-    """Nombre de combinaisons sans répétition de k objets pris parmi n"""
-    if k > n // 2:
-        k = n - k
-    x = 1
-    y = 1
-    i = n - k + 1
-    while i <= n:
-        x = (x * i) // y
-        y += 1
-        i += 1
-    return x
-
-
-def choix_coord(a, b):
-    """Calcul des valeurs absolues des coordonnées pour définir xlim et ylim du graph de projection des individus"""
-    if a < 0:
-        if (-a) > b:
-            lim = (a, -a)
-        else:
-            lim = (-b, b)
-    else:
-        lim = (a, b)
-    return lim
-
-
-def multi_table(table_list, marg_r=None):
-    """Afficher des df côte à côte"""
-    return HTML(
-        '<table><tr style="text-align:right;">'
-        + "".join(
-            [
-                "<td "
-                + (
-                    ' style="text-align:right;padding-right:'
-                    + marg_r
-                    + 'rem!important;"'
-                    if marg_r is not None
-                    else ""
-                )
-                + ">"
-                + table._repr_html_()
-                + "</td>"
-                for table in table_list
-            ]
-        )
-        + "</tr></table>"
-    )
-
-
-def alert_verif(fail, success, valid):
-    """Afficher alertes error ou success des tests lors de l'ACP"""
-    if valid == False:
-        display(
-            HTML(
-                '<div class="alert alert-block alert-danger" style="width:fit-content; margin:8px auto 8px 0; border-radius:5px; padding:7px 50px 7px 15px;">'
-                + fail
-                + "</div>"
-            )
-        )
-    else:
-        display(
-            HTML(
-                '<div class="alert alert-block alert-success" style="width:fit-content; margin:8px auto 8px 0; border-radius:5px; padding:7px 50px 7px 15px;">'
-                + success
-                + "</div>"
-            )
-        )
-
-
-def dic_modalite(df, group):
-    """Si modalités de colonne groupe ne sont pas de type integer => ajout d'une colonne avec correspondance modalité <=> integer"""
-    modalites = df[group].unique().tolist()
-    modalites = sorted(modalites)
-    dic_mod = {}
-    for i in range(len(modalites)):
-        dic_mod[modalites[i]] = str(i + 1)
-    df["i_" + group] = df[group].apply(lambda x: dic_mod[x])
-    df = df.drop(columns=[group])
-    df = df.rename(columns={"i_" + group: group})
-    return [df, group, dic_mod]
-
-
 def acp_global(
     df,
     axis_ranks=[(0, 1)],
@@ -188,6 +105,90 @@ def acp_global(
         Valeur par défaut : ["#b30f1c", "#0e6667", "#3353e1", "#4ed147", "#d17e1a", "#2bb6b6",
             "#514a39", "#4ed147", "#acb073", "#8b3afd", "#dec11b", "#58f3e6", "#728e9d"]
     """
+
+    def C(k, n):
+        """Nombre de combinaisons sans répétition de k objets pris parmi n"""
+        if k > n // 2:
+            k = n - k
+        x = 1
+        y = 1
+        i = n - k + 1
+        while i <= n:
+            x = (x * i) // y
+            y += 1
+            i += 1
+        return x
+
+
+    def choix_coord(a, b):
+        """Calcul des valeurs absolues des coordonnées pour définir xlim et ylim du graph de projection des individus"""
+        if a < 0:
+            if (-a) > b:
+                lim = (a, -a)
+            else:
+                lim = (-b, b)
+        else:
+            lim = (a, b)
+        return lim
+
+
+    def multi_table(table_list, marg_r=None):
+        """Afficher des df côte à côte"""
+        return HTML(
+            '<table><tr style="text-align:right;">'
+            + "".join(
+                [
+                    "<td "
+                    + (
+                        ' style="text-align:right;padding-right:'
+                        + marg_r
+                        + 'rem!important;"'
+                        if marg_r is not None
+                        else ""
+                    )
+                    + ">"
+                    + table._repr_html_()
+                    + "</td>"
+                    for table in table_list
+                ]
+            )
+            + "</tr></table>"
+        )
+
+
+    def alert_verif(fail, success, valid):
+        """Afficher alertes error ou success des tests lors de l'ACP"""
+        if valid == False:
+            display(
+                HTML(
+                    '<div class="alert alert-block alert-danger" style="width:fit-content; margin:8px auto 8px 0; border-radius:5px; padding:7px 50px 7px 15px;">'
+                    + fail
+                    + "</div>"
+                )
+            )
+        else:
+            display(
+                HTML(
+                    '<div class="alert alert-block alert-success" style="width:fit-content; margin:8px auto 8px 0; border-radius:5px; padding:7px 50px 7px 15px;">'
+                    + success
+                    + "</div>"
+                )
+            )
+
+
+    def dic_modalite(df, group):
+        """Si modalités de colonne groupe ne sont pas de type integer => ajout d'une colonne avec correspondance modalité <=> integer"""
+        modalites = df[group].unique().tolist()
+        modalites = sorted(modalites)
+        dic_mod = {}
+        for i in range(len(modalites)):
+            dic_mod[modalites[i]] = str(i + 1)
+        df["i_" + group] = df[group].apply(lambda x: dic_mod[x])
+        df = df.drop(columns=[group])
+        df = df.rename(columns={"i_" + group: group})
+        return [df, group, dic_mod]
+
+
 
     # Création du dossier de sauvegarde des graphs
     os.makedirs("apc_graphs", exist_ok=True)
