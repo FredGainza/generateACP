@@ -1,6 +1,8 @@
-adjustText
 pandas
 numpy
 scikit-learn
 matplotlib
 jupyter
+adjustText
+pdfservices-sdk
+openpyxl

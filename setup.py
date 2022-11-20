@@ -3,7 +3,7 @@ from setuptools import setup
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
-requirements = ["pandas", "numpy", "scikit-learn", "matplotlib", "jupyter", "adjustText", "pdfservices-sdk"]
+requirements = ["pandas", "numpy", "scikit-learn", "matplotlib", "jupyter", "adjustText", "pdfservices-sdk", "openpyxl"]
 
 setup(
     name='generateACP',
