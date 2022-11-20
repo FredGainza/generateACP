@@ -3,11 +3,11 @@ from setuptools import setup
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
-requirements = ["pandas", "numpy", "scikit-learn", "matplotlib", "jupyter", "adjustText"]
+requirements = ["pandas", "numpy", "scikit-learn", "matplotlib", "jupyter", "adjustText", "pdfservices-sdk"]
 
 setup(
-    name='generate-acp',
-    packages_dir=["generate-acp"],
+    name='generateACP',
+    packages_dir=["generateACP"],
     install_requires=requirements,
     version='0.1.0',
     description='Génréation des données et des graphiques d\'une Analyse en Composantes Principales ACP',
