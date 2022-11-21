@@ -267,15 +267,15 @@ def acp_global(
     msg_array=[]
     if labels is None and labels_ind is None:
         labels = True
-        msg_array.append("ATTENTION: les paramètres 'labels' et 'labels_int' avaient pour valeur None.\n"+
+        msg_array.append("ATTENTION: les paramètres 'labels' et 'labels_int' avaient pour valeur None.<br>"+
         "Afin de pouvoir exécuter la fonction, la valeur de 'labels' a été passée à True")
     if labels is not None and labels_ind is not None:
         labels_ind = None
-        msg_array.append("ATTENTION: les paramètres 'labels' et 'labels_int' avaient pour valeur True.\n"+
+        msg_array.append("ATTENTION: les paramètres 'labels' et 'labels_int' avaient pour valeur True.<br>"+
         "Afin de pouvoir exécuter la fonction, la valeur de 'labels_ind' a été passée à None")
     if labels_ind is None and legend_label is not None:
         legend_label = None
-        msg_array.append("ATTENTION: incompatibilité entre 'labels_ind' = None et legend_label != None\n"+
+        msg_array.append("ATTENTION: incompatibilité entre 'labels_ind' = None et legend_label != None.<br>"+
         "Afin de pouvoir exécuter la fonction, la valeur de 'legend_label' a été passée à None")
         
 
@@ -396,15 +396,8 @@ def acp_global(
 
     if graph_only is None:
         display(HTML("<h2 style=" + h2s + ">Analyse en composantes principales</h2>"))
-        # affichage d'infos générales sur les données initiales
-        display(HTML("<h3 style=" + h3s + ">1. Informations sur les données</h3>"))
-        print()
-        display(HTML("<h4 style=" + h4s + ">1.1 Données initiales</h4>"))
-        print("Nombre d'individus : " + str(n))
-        print("Nombre de variables : " + str(p))
-        display(df.describe())
-        print()
 
+        # si problème de cohérence dans les paramètres => message d'alerte
         if len(msg_array) != 0:
             msg_coherence_fail = "\n\n".join(msg_array)
             alert_verif(
@@ -413,6 +406,15 @@ def acp_global(
                 valid=False,
             )
             print()
+
+        # affichage d'infos générales sur les données initiales
+        display(HTML("<h3 style=" + h3s + ">1. Informations sur les données</h3>"))
+        print()
+        display(HTML("<h4 style=" + h4s + ">1.1 Données initiales</h4>"))
+        print("Nombre d'individus : " + str(n))
+        print("Nombre de variables : " + str(p))
+        display(df.describe())
+        print()
 
 
     ######### Instanciation et lancement des calculs
@@ -585,6 +587,7 @@ def acp_global(
                 nb_f_var_e = jj + 1
                 break
 
+        df_var_e["Part de variance expliquée"] = str(round(df_var_e["Part de variance expliquée"]*100, 2))+"%"
         display(df_var_e)
         print(
             "Si on recherche à expliquer au minimum 80% de la variance, il faut retenir "
@@ -892,13 +895,16 @@ def acp_global(
     if graph_only is None:
         print(
             "####################################################################################\n"+
-            "####                        contribution des variables                          ####\n"+
+            "####                        Contribution des variables                          ####\n"+
             "####################################################################################"
         )
         print(
             "La contribution est également basée sur le carré de la corrélation, mais relativisée par l’importance de l’axe."
 
         )
+        for col in list(x4.columns):
+            if col != "id":
+                x4[col] = str(x4[col]*100)+"%"
         display(x4)
 
     # vérifions la théorie - somme en colonnes = 1
