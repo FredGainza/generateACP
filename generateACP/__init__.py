@@ -587,7 +587,7 @@ def acp_global(
                 nb_f_var_e = jj + 1
                 break
 
-        df_var_e["Part variance expliquée"] = round(df_var_e["part_var"]*100, 4)
+        df_var_e["Part variance expliquée"] = round(df_var_e["part_var"]*100, 2)
         df_var_e["Part variance expliquée"] = df_var_e["Part variance expliquée"].astype(str)
         df_var_e["Part variance expliquée"] = df_var_e["Part variance expliquée"].apply(lambda x: x+"%")
         df_var_e = df_var_e.drop(columns=['part_var'])
