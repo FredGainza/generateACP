@@ -1,12 +1,14 @@
 # generateACP
 
+![Badge KoPaTiK](https://img.shields.io/badge/KoPaTiK-Agency-blue "Badge KoPaTiK")
+
 *** 
 
-<p style="color:#00FFFF;font-size:125%;">Fonction générant les calculs et les graphiques d'une ACP.</p>
+## <p style="color:#00FFFF;">Fonction générant les calculs et les graphiques d'une ACP.</p>
 
 ***
 
-### Paramètre principal à renseigner : dataframe avec :
+### Paramètre principal à renseigner => dataframe avec :
 
 - en index : la variable d'observation
 - en colonnes : les variables explicatives quantitatives
@@ -45,15 +47,15 @@
 
 ```bash
     ### Créer un dossier pour le projet
-	$ cd /vers/dossier/testACP
+    $ cd /vers/dossier/testACP
 	
-	### Créer un nouvel environnement
-	$ conda create -n envAcp python=3.9
-	### Activer le nouvel environnement
-	$ conda activate envAcp
+    ### Créer un nouvel environnement
+    $ conda create -n envAcp python=3.9
+    ### Activer le nouvel environnement
+    $ conda activate envAcp
 	
-	### Installer le module generateAcp
-	$ pip install git+https://github.com/FredGainza/generateACP.git
+    ### Installer le module generateAcp
+    $ pip install git+https://github.com/FredGainza/generateACP.git
 ```
 
 Pour utiliser le module dans un notebook, il faut importer la fonction **acp_global()** :
@@ -76,3 +78,7 @@ Les modules suivants seront automatiquement installés :
 ## Documentation
 
 RDV [ICI](https://FredGainza.github.io/generateACP/)
+
+## Exemple
+
+Exemple disponible dans le dossier [docs](https://github.com/FredGainza/generateACP/blob/9b5bdff1c501e162d7d2e4cd352cdc9fb641b02a/docs/analyse_exemple.html)
