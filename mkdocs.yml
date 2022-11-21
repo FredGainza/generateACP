@@ -1,0 +1,16 @@
+site_name: generateACP
+site_url: https://github.com/FredGainza/generateACP
+
+theme:
+  name: flatly
+  locale: fr
+  extra_css: [extra.css]
+  
+extra_css:
+    - extra.css
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Home: index.md

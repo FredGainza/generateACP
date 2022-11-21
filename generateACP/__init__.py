@@ -31,7 +31,7 @@ def acp_global(
     palette_color=None
 ):
 
-    """Générer les calculs et les graphs d'une ACP
+    """
 
         Parameters:
 
