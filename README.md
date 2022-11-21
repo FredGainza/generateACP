@@ -81,4 +81,4 @@ RDV [ICI](https://FredGainza.github.io/generateACP/)
 
 ## Exemple
 
-Exemple disponible dans le dossier [docs](https://github.com/FredGainza/generateACP/blob/9b5bdff1c501e162d7d2e4cd352cdc9fb641b02a/docs/analyse_exemple.html)
+Notebook disponible au format [html](https://kopadata.fr/data/analyse_acp_exemple.html)
