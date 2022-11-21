@@ -579,15 +579,18 @@ def acp_global(
                 df_var_e.loc[j, "Facteurs"] = "le 1er facteur"
             else:
                 df_var_e.loc[j, "Facteurs"] = "les " + str(j + 1) + " 1ers facteurs"
-        df_var_e.columns = ["Facteurs", "Part variance expliquée"]
+        df_var_e.columns = ["Facteurs", "par_var"]
 
         nb_f_var_e = 0
-        for jj, pp in enumerate(list(df_var_e["Part variance expliquée"])):
+        for jj, pp in enumerate(list(df_var_e["part_var"])):
             if pp >= 0.8:
                 nb_f_var_e = jj + 1
                 break
 
-        df_var_e["Part variance expliquée"] = str(round(df_var_e["Part variance expliquée"]*100, 2))+"%"
+        df_var_e["Part variance expliquée"] = round(df_var_e["part_var"]*100, 4)
+        df_var_e["Part variance expliquée"] = df_var_e["Part variance expliquée"].astype(str)
+        df_var_e["Part variance expliquée"] = df_var_e["Part variance expliquée"].apply(lambda x: x+"%")
+        df_var_e = df_var_e.drop(colums=['part_var'])
         display(df_var_e)
         print(
             "Si on recherche à expliquer au minimum 80% de la variance, il faut retenir "
@@ -902,9 +905,13 @@ def acp_global(
             "La contribution est également basée sur le carré de la corrélation, mais relativisée par l’importance de l’axe."
 
         )
-        for col in list(x4.columns):
-            if col != "id":
-                x4[col] = str(x4[col]*100)+"%"
+        cols = [x for x in list(x4.columns) if x != "id"]
+        cols_str = [x+'_str' for x in cols]
+        for col in cols:
+            x4[col+'_str'] = round(x4[col]*100, 4)
+            x4[col+'_str'] = x4[col+'_str'].astype(str)
+            x4[col+'_str'] = x4[col+'_str'].apply(lambda x: x+"%")
+        x4 = x4[cols_str]
         display(x4)
 
     # vérifions la théorie - somme en colonnes = 1
