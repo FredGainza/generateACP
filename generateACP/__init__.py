@@ -409,12 +409,10 @@ def acp_global(
 
         # affichage d'infos générales sur les données initiales
         display(HTML("<h3 style=" + h3s + ">1. Informations sur les données</h3>"))
-        print()
         display(HTML("<h4 style=" + h4s + ">1.1 Données initiales</h4>"))
         print("Nombre d'individus : " + str(n))
         print("Nombre de variables : " + str(p))
         display(df.describe())
-        print()
 
 
     ######### Instanciation et lancement des calculs
@@ -472,7 +470,6 @@ def acp_global(
             success="La vérifiction de la somme des valeurs propres égale au nombre de variables s'est correctement déroulée",
             valid=valid,
         )
-        print()
 
         ###########################################################################
         #       2. Recherche du nombre de facteurs à retenir
@@ -647,12 +644,12 @@ def acp_global(
 
         display(HTML("<h3 style=" + h3s + ">3. Représentation des individus</h3>"))
 
-        print()
         print(
             "################################################################################\n"+
             "####               Coordonnées factorielles des individus                   ####\n"+
             "################################################################################"
         )
+        print()
 
         print("On affiche les coordonnées factorielles de 3 individus (random)")
         cff = cf.copy()
@@ -671,6 +668,7 @@ def acp_global(
             "####             Qualité de la représentation des individus                 ####\n"+
             "################################################################################"
         )
+        print()
 
     di = np.sum(Z**2, axis=1)
     x = pd.DataFrame({"ID": X.index, "d_i": di})
@@ -725,6 +723,7 @@ def acp_global(
             "####                  Contributions des individus aux axes                  ####\n"+
             "################################################################################"
         )
+        print()
         print(
             "Elles permettent de déterminer les individus qui pèsent le plus dans la définition de chaque facteur.\n"+
             "On regarde quels sont les individus qui sont les plus contributifs et ce, pour les différents axes.\n"+
@@ -945,7 +944,6 @@ def acp_global(
                 "<h3 style=" + h3s + ">5. Traitement des variables supplémentaires</h3>"
             )
         )
-        print()
 
     # variables supplémentaires quantitatives
     if varSupp is not None:
@@ -955,6 +953,7 @@ def acp_global(
                 "####                   Variables illustratives quantitatives                    ####\n"+
                 "####################################################################################"
             )
+            print()
 
         # corrélation avec les axes factoriels
         vsQuanti = varSupp.values
@@ -990,6 +989,7 @@ def acp_global(
                 "####                    Variables illustratives qualitatives                    ####\n"+
                 "####################################################################################"
             )
+            print()
             print(
                 "Principe : on utilise la variable qualitative pour différencier les individus en fonction des modalités de celle-ci."
             )
@@ -1712,8 +1712,8 @@ def acp_global(
         serach_str = "l'indice recherché soit 3 :" if labels_ind is not None else "la valeur recherchée soit 'obs3' :"
         vv = "3" if labels_ind is not None else "obs3"
         print('Ex : en supposant que le nom donné à l\'exécution de la fonction soit "resultat_acp" et que '+serach_str)
-        display(HTML('  - <b>resultat_acp["select_obs"]["'+vv+'"][0]</b> pour afficher le df de données initiales'))
-        display(HTML('  - <b>resultat_acp["select_obs"]["'+vv+'"][1]</b> pour afficher le df de données calculées de l\'individu recherché'))
+        print('  - resultat_acp["select_obs"]["'+vv+'"][0] pour afficher le df de données initiales')
+        print('  - resultat_acp["select_obs"]["'+vv+'"][1] pour afficher le df de données calculées de l\'individu recherché')
 
     if data_only is True:
         print("Traitement terminé")
