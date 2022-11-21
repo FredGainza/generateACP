@@ -13,8 +13,7 @@ from math import floor
 import os
 
 
-def acp_global(
-    df,
+def acp_global(df,
     axis_ranks=[(0, 1)],
     group=None,
     group_special=None,
@@ -23,87 +22,155 @@ def acp_global(
     labels=True,
     labels_ind=None,
     legend_label=None,
-    widget=None,
     version_name=None,
     graph_only=None,
     graph_only_acp=None,
     data_only=None,
-    bg="light",
-    palette_color=None,
-):
+    color_titles=None,
+    palette_color=None):
 
-    """
-    df : mettre en index la variable des observations
+    """Générer les calculs et les graphs d'une ACP
 
-    axis_ranks = [(0,1)]
-        cf. les dimensions du / des plan(s) factoriels à étudier
-        par défaut "[(0,1)]"
-        vérifier que les degrés factortiels ne soient pas supérieurs aux nombres de variables
+        Parameters:
 
-    group = None
-        cf. clustering
-        valeur acceptée : nom de la colonne de groupe
-        NB : il faut donc que le df initial comporte cette colonne
+            df (DataFrame): df initial structuré pour une ACP:
+                - en ligne: les individus / observations
+                - en colonne: les variables explicatives quantitatives 
+                - en index: la variable des observations
 
-    group_special = None
-        cf. liste d'individus constituant un groupe particulier (individus particuliers de la variable en index)
-        valeur acceptée : liste d'individus
+            axis_ranks (list): les dimensions du / des plan(s) factoriels à étudier
+                default: "[(0,1)]"
+                info:
+                    - vérifier que les degrés factortiels ne soient pas supérieurs aux nombres de variables
+                    - possible de lancer la fonction acp_global() pour connaitre le résultat des tests de recherche du nombre 
+                    de facteurs à retenir (eboulis des valeurs propres avec proportion cumulée de la variance expliquée, test
+                    des bâtons brisés) en laissant la valeur des paramètres par défaut
 
-    varSupp = None
-        cf. variables illustratives quantitatives
-        valeur acceptée : df avec
-                            - même nb de lignes que le df initial
-                            - en colonnes les variables illustratives quantitatives
+                    Exemple: en supposant que:
+                        - df soit le nom du DataFrame des données initiales
+                        - resultat_acp soit le nom donné au résultat de la fonction :
 
-    varSuppQual = None
-        cf. variables illustratives qualitatives
-        valeur acceptée : df avec
-                            - même nb de lignes que le df initial
-                            - en colonnes les variables illustratives qualitatives
+                    resultat_acp = acp_globale(df)
 
-    labels = None
-        cf. Affichage des valeurs de la variable des observations (variable en index)
-        valeur acceptée : True or None
-        NB : si labels = True, alors labels_ind = False  (ne choisir que 1 de ces 2 possibilités)
+            group (str): clustering
+                default: None
+                info:
+                    - valeur acceptée : nom de la colonne de groupe
+                    - il faut donc que le df initial comporte cette colonne
 
-    labels_ind = None
-        cf. Affichage de l'indice des valeurs de la variable des observations (variable en index)
-        valeur acceptée : True or None
-        NB : si labels_ind = True, alors labels = False  (ne choisir que 1 de ces 2 possibilités)
+            group_special (list): liste d'individus constituant un groupe particulier (individus particuliers de la variable en index)
+                default: None
+                info:
+                    - valeur acceptée : liste d'individus
 
-    legend_label = None
-        cf. affichage des correspondances indice et valeur de la variable d'observation (valable ssi labels_ind=True)
-        valeur acceptée : True or None
+            varSupp (DataFrame): variables illustratives quantitatives
+                default: None
+                info:
+                    - valeur acceptée : df avec
+                                        - même nb de lignes que le df initial (les mêmes individus)
+                                        - en colonnes les variables illustratives quantitatives
 
-    widget = None
-        cf. affichage des 2 widgets :
-            - infos sur un iondividu
-            - composition des groupes
-        valeur acceptée : True or None
+            varSuppQual (DataFrame): variables illustratives qualitatives
+                default: None
+                valeur acceptée : df avec
+                                    - même nb de lignes que le df initial (les mêmes individus)
+                                    - en colonnes les variables illustratives qualitatives
 
-    version_name = None
-        cf. prefixer les graphiques par un nom particulier
-        valeur acceptée : str
+            labels (boolean): affichage des valeurs de la variable des observations (variable en index)
+                default: True
+                info:
+                    - valeur acceptée : True or None
+                    - NB : si labels = True, alors labels_ind = False  (ne choisir que 1 de ces 2 possibilités)
 
-    graph_only = None
-        cf. afficher seulement les graphiques (cercle de corrélation et projection des individus)
-        valeur acceptée : true or None
+            labels_ind (boolean): affichage de l'indice des valeurs de la variable des observations (variable en index)
+                default: None
+                info:
+                    - valeur acceptée : True or None
+                    - NB : si labels_ind = True, alors labels = False  (ne choisir que 1 de ces 2 possibilités)
+                    - intérêt de cette option: facilite la lecture du graphique "Projection des individus", notamment si le
+                    nombre d'oservations (nombre de lignes) est important
 
-    data_only = None
-        cf. ne rien renvoyer lors de l'appel de la fonction
-        pour print un élément en particulier
-            - donner un nom à la fonction lors de l'appel - ex : res = acp_perso(df, data_only=True)
-            - faire print(*res)
+            legend_label (boolean): affichage des correspondances indice et valeur de la variable d'observation 
+            (valable ssi labels_ind=True)
+                default: None
+                info: 
+                    - valeur acceptée : True or None
+                    - si True, une légende de correspondance entre index affiché sur le graphique et valeur réelle de la 
+                    variable d'observationb (en index) sera affichée sous le graphique
 
-    bg = "light"
-        cf. adapter font_color au theme dark ou light
-        Valeur acceptée : "light" ou "dark"
+            version_name (str): prefixer les graphiques par un nom particulier
+                default: None
+                info:
+                    valeur acceptée : string qui prefixera le nom des graphiques 
+                    ex : si version_name = "test1" alors le graphique "Eboulis des valeurs propres se nommera 
+                    "test1_recherche_nb_facteurs_optimal.png"
+                    intérêt: enregistrer tous les graphiques de différentes versions d'une même ACP
+                
+            graph_only (boolean): afficher seulement les graphiques (cercle de corrélation et projection des individus)
+                default: None
+                info:
+                    - valeur acceptée : True or None
 
-    palette_color = None
-        cf. liste de couleurs souhaitée
-        valeur acceptée : liste de couleurs au format hexadécimale (ex "#FFFFFF")
-        Valeur par défaut : ["#b30f1c", "#0e6667", "#3353e1", "#4ed147", "#d17e1a", "#2bb6b6",
-            "#514a39", "#4ed147", "#acb073", "#8b3afd", "#dec11b", "#58f3e6", "#728e9d"]
+            data_only (boolean): ne rien renvoyer lors de l'appel de la fonction
+                default: None
+                info: 
+                    - valeur acceptée : True or None
+                    - pour print un élément en particulier:
+                        * donner un nom à la fonction lors de l'appel
+                            ex : resultat_acp = acp_perso(df, data_only=True)
+                        * faire print(*resultat_acp)
+
+            color_titles (list): liste de 3 couleurs au format hexadécimale (ex "#FFFFFF") pour les titres h2, h3, h4
+                default: None
+                info: 
+                    - couleurs des titres par défaut : ["#b08c20", "#3aa237", "#29858a"]
+
+            palette_color = liste de couleurs au format hexadécimale (ex "#FFFFFF")pour les graphiques de l'ACP
+                default: None
+                info:
+                    - couleurs par défaut : ["#b30f1c", "#0e6667", "#3353e1", "#4ed147", "#d17e1a", "#2bb6b6",
+                    "#514a39", "#4ed147", "#acb073", "#8b3afd", "#dec11b", "#58f3e6", "#728e9d"]
+
+        Returns
+            all_values (dict): dictionnaire avec keys:
+                val_centre_reduit:              (DataFrame): df centré-réduit
+                valeurs_propres                 (list): valeurs propres
+                pct_inertie_par_facteur         (list): pourcentage d'inertie par facteur
+                nb_groupes_opt                  (str): path du graph "Eboulis des valeurs propres"
+                test_batons_brises              (DataFrame): df valeurs propres / valeurs de seuil par facteur
+                coord_fact_ind                  (DataFrame): coordonnées factorielles des individus
+                cos2_ind                        (DataFrame): cos² des individus pour chaque axe factoriel
+                contribution_ind                (DataFrame): df globale: contribution des individus aux axes
+                
+                pour tous les facteurs i:
+                    ctr_ind_sorted_facteur_i    (DataFrame): df par facteur: les plus gros contributeurs à l'axe i
+
+                vecteurs_propres                (DataFrame): vecteurs propres des variables par facteur
+                matrice_cor                     (array): matrice des corrélations des variables par facteur
+                cor_par_facteur                 (DataFrame): df de la matrice des corrélations                 
+                cos2_var                        (DataFrame): cos² des variables par axe factoriel
+                contribution_var                (DataFrame): contribution des variables aux axes                
+                cor_par_facteur_VarQttiveIllus  (DataFrame): corrélations des variables quantitatives illustratives par axe
+                resultats_tests                 (list): résultats des différents tests interes (1 if ok else 0)
+                
+                pour chaque plan factoriel [a,b]:
+                    centroides_a_b              (array): si clusters ou variable qualitative illustrative: coordonnées des centroïdes                  
+                    graph_proj_ind_a_b          (str): path du graph de projection des individus
+                    cercle_cor_a_b              (str): path du graph du cercle des corrélations
+                    graph_combo_a_b             (str): path du graph composé (cf. les 2 graphs précédents)
+
+                select_obs                      (dict): dictionnaire :
+                                                    * key:
+                                                        - si labels=True        alors valeurs de la variable d'observation
+                                                        - si labels_ind = True  alors index des valeurs de la variable d'observation
+                                                    * value:
+                                                        - tuple composé de 2 df:
+                                                            - df données initiales de l'observation
+                                                            - df données calculées pour cette observation
+                                                                - ses coordonnées factorielles
+                                                                - sa qualité de représentation sur les différents axes (cf. COS²)
+                                                                - sa contribution aux différents axes
+
     """
 
     def C(k, n):
@@ -189,19 +256,30 @@ def acp_global(
         return [df, group, dic_mod]
 
 
+    # test cohérence des paramètres
+    msg_array=[]
+    if labels is None and labels_ind is None:
+        labels = True
+        msg_array.append("ATTENTION: les paramètres 'labels' et 'labels_int' avaient pour valeur None.\n"+
+        "Afin de pouvoir exécuter la fonction, la valeur de 'labels' a été passée à True")
+    if labels is not None and labels_ind is not None:
+        labels_ind = None
+        msg_array.append("ATTENTION: les paramètres 'labels' et 'labels_int' avaient pour valeur True.\n"+
+        "Afin de pouvoir exécuter la fonction, la valeur de 'labels_ind' a été passée à None")
+    if labels_ind is None and legend_label is not None:
+        legend_label = None
+        msg_array.append("ATTENTION: incompatibilité entre 'labels_ind' = None et legend_label != None\n"+
+        "Afin de pouvoir exécuter la fonction, la valeur de 'legend_label' a été passée à None")
+        
 
     # Création du dossier de sauvegarde des graphs
     os.makedirs("apc_graphs", exist_ok=True)
 
     # Gestion des couleurs des fonts
-    if bg == "light":
-        h2s = "color:#b08c20!important;padding-left:.5rem!important;line-height:150%!important;"
-        h3s = "color:#3aa237!important;padding-left:1rem !important;line-height:150%!important;font-size:120%!important;"
-        h4s = "color:#29858a!important;padding-left:2rem !important;font-size:110% !important;"
-    if bg == "dark":
-        h2s = "color:#b08c20!important;padding-left:.5rem!important;line-height:150%!important;"
-        h3s = "color:#3aa237!important;padding-left:1rem !important;line-height:150%!important;font-size:120%!important;"
-        h4s = "color:#3cdbe3!important;padding-left:2rem !important;font-size:110% !important;"
+    cc_titles = color_titles if color_titles is not None else ["#b08c20", "#3aa237", "#29858a"]
+    h2s = "color:"+cc_titles[0]+"!important;padding-left:.5rem!important;line-height:150%!important;"
+    h3s = "color:"+cc_titles[1]+"!important;padding-left:1rem !important;line-height:150%!important;font-size:120%!important;"
+    h4s = "color:"+cc_titles[2]+"!important;padding-left:2rem !important;font-size:110% !important;"
 
     if palette_color == None:
         palette_perso = [
@@ -250,7 +328,6 @@ def acp_global(
     if group is not None:
         df_c = df.copy()
         df = df_c.drop(columns=(group))
-    df_global = pd.concat(df_liste, axis=1)
     df_global_data = pd.concat(df_liste_data, axis=1)
 
     if group_special is not None:
@@ -307,9 +384,7 @@ def acp_global(
     ############################################################################
 
     ###########################################################################
-    #
     #       1. Informations sur les données
-    #
     ###########################################################################
 
     if graph_only is None:
@@ -322,6 +397,16 @@ def acp_global(
         print("Nombre de variables : " + str(p))
         display(df.describe())
         print()
+
+        if len(msg_array) != 0:
+            msg_coherence_fail = "\n\n".join(msg_array)
+            alert_verif(
+                fail=msg_coherence_fail,
+                success="",
+                valid=False,
+            )
+            print()
+
 
     ######### Instanciation et lancement des calculs
 
@@ -508,7 +593,7 @@ def acp_global(
         print("|     Test des bâtons brisés     |")
         print("----------------------------------")
         display(bb)
-        display(
+        print(
             "Selon le \"test des bâtons brisés\", "
             + (
                 "seul le premier facteur est valide"
@@ -544,9 +629,7 @@ def acp_global(
             print()
 
         ###########################################################################
-        #
         #       3. Représentation des individus
-        #
         ###########################################################################
 
         display(HTML("<h3 style=" + h3s + ">3. Représentation des individus</h3>"))
@@ -1609,8 +1692,8 @@ def acp_global(
         serach_str = "l'indice recherché soit 3 :" if labels_ind is not None else "la valeur recherchée soit 'obs3' :"
         vv = "3" if labels_ind is not None else "obs3"
         print('Ex : en supposant que le nom donné à l\'exécution de la fonction soit "resultat_acp" et que '+serach_str)
-        display(HTML('  - <b>resultat.acp["select_obs"]["'+vv+'"][0]</b> pour afficher le df de données initiales'))
-        display(HTML('  - <b>resultat.acp["select_obs"]["'+vv+'"][1]</b> pour afficher le df de données calculées de l\'individu recherché'))
+        display(HTML('  - <b>resultat_acp["select_obs"]["'+vv+'"][0]</b> pour afficher le df de données initiales'))
+        display(HTML('  - <b>resultat_acp["select_obs"]["'+vv+'"][1]</b> pour afficher le df de données calculées de l\'individu recherché'))
 
     if data_only is True:
         print("Traitement terminé")
