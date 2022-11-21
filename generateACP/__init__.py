@@ -590,7 +590,7 @@ def acp_global(
         df_var_e["Part variance expliquée"] = round(df_var_e["part_var"]*100, 4)
         df_var_e["Part variance expliquée"] = df_var_e["Part variance expliquée"].astype(str)
         df_var_e["Part variance expliquée"] = df_var_e["Part variance expliquée"].apply(lambda x: x+"%")
-        df_var_e = df_var_e.drop(colums=['part_var'])
+        df_var_e = df_var_e.drop(columns=['part_var'])
         display(df_var_e)
         print(
             "Si on recherche à expliquer au minimum 80% de la variance, il faut retenir "
