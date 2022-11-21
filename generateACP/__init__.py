@@ -579,7 +579,7 @@ def acp_global(
                 df_var_e.loc[j, "Facteurs"] = "le 1er facteur"
             else:
                 df_var_e.loc[j, "Facteurs"] = "les " + str(j + 1) + " 1ers facteurs"
-        df_var_e.columns = ["Facteurs", "par_var"]
+        df_var_e.columns = ["Facteurs", "part_var"]
 
         nb_f_var_e = 0
         for jj, pp in enumerate(list(df_var_e["part_var"])):
