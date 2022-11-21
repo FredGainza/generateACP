@@ -587,7 +587,7 @@ def acp_global(
                 nb_f_var_e = jj + 1
                 break
 
-        df_var_e["Part de variance expliquée"] = str(round(df_var_e["Part de variance expliquée"]*100, 2))+"%"
+        df_var_e["Part variance expliquée"] = str(round(df_var_e["Part variance expliquée"]*100, 2))+"%"
         display(df_var_e)
         print(
             "Si on recherche à expliquer au minimum 80% de la variance, il faut retenir "
