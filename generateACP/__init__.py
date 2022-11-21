@@ -13,7 +13,8 @@ from math import floor
 import os
 
 
-def acp_global(df,
+def acp_global(
+    df,
     axis_ranks=[(0, 1)],
     group=None,
     group_special=None,
@@ -27,149 +28,155 @@ def acp_global(df,
     graph_only_acp=None,
     data_only=None,
     color_titles=None,
-    palette_color=None):
+    palette_color=None
+):
 
     """Générer les calculs et les graphs d'une ACP
 
         Parameters:
 
             df (DataFrame): df initial structuré pour une ACP:
-                - en ligne: les individus / observations
+
+                - en ligne: des individus / observations
                 - en colonne: les variables explicatives quantitatives 
                 - en index: la variable des observations
 
             axis_ranks (list): les dimensions du / des plan(s) factoriels à étudier
-                default: "[(0,1)]"
-                info:
-                    - vérifier que les degrés factortiels ne soient pas supérieurs aux nombres de variables
-                    - possible de lancer la fonction acp_global() pour connaitre le résultat des tests de recherche du nombre 
-                    de facteurs à retenir (eboulis des valeurs propres avec proportion cumulée de la variance expliquée, test
-                    des bâtons brisés) en laissant la valeur des paramètres par défaut
+
+                - vérifier que les degrés factortiels ne soient pas supérieurs aux nombres de variables
+                - possible de lancer la fonction acp_global() pour connaitre le résultat des tests de recherche du nombre
+                de facteurs à retenir (eboulis des valeurs propres avec proportion cumulée de la variance expliquée, test
+                des bâtons brisés) en laissant la valeur des paramètres par défaut
+
 
                     Exemple: en supposant que:
-                        - df soit le nom du DataFrame des données initiales
-                        - resultat_acp soit le nom donné au résultat de la fonction :
 
-                    resultat_acp = acp_globale(df)
+                    - df soit le nom du DataFrame des données initiales
+                    - resultat_acp soit le nom donné au résultat de la fonction :
+
+                            resultat_acp = acp_globale(df)
 
             group (str): clustering
-                default: None
-                info:
-                    - valeur acceptée : nom de la colonne de groupe
-                    - il faut donc que le df initial comporte cette colonne
+
+                - valeur acceptée : nom de la colonne de groupe
+                - il faut donc que le df initial comporte cette colonne
 
             group_special (list): liste d'individus constituant un groupe particulier (individus particuliers de la variable en index)
-                default: None
-                info:
-                    - valeur acceptée : liste d'individus
+
+                - valeur acceptée : liste d'individus
 
             varSupp (DataFrame): variables illustratives quantitatives
-                default: None
-                info:
-                    - valeur acceptée : df avec
-                                        - même nb de lignes que le df initial (les mêmes individus)
-                                        - en colonnes les variables illustratives quantitatives
+
+                - valeur acceptée : df avec
+
+                    - même nb de lignes que le df initial (les mêmes individus)
+                    - en colonnes les variables illustratives quantitatives
 
             varSuppQual (DataFrame): variables illustratives qualitatives
-                default: None
-                valeur acceptée : df avec
-                                    - même nb de lignes que le df initial (les mêmes individus)
-                                    - en colonnes les variables illustratives qualitatives
+
+                - valeur acceptée : df avec
+
+                    - même nb de lignes que le df initial (les mêmes individus)
+                    - en colonnes les variables illustratives qualitatives
 
             labels (boolean): affichage des valeurs de la variable des observations (variable en index)
-                default: True
-                info:
-                    - valeur acceptée : True or None
-                    - NB : si labels = True, alors labels_ind = False  (ne choisir que 1 de ces 2 possibilités)
+
+                - valeur acceptée : True or None
+                - NB : si labels = True, alors labels_ind = False  (ne choisir que 1 de ces 2 possibilités)
 
             labels_ind (boolean): affichage de l'indice des valeurs de la variable des observations (variable en index)
-                default: None
-                info:
-                    - valeur acceptée : True or None
-                    - NB : si labels_ind = True, alors labels = False  (ne choisir que 1 de ces 2 possibilités)
-                    - intérêt de cette option: facilite la lecture du graphique "Projection des individus", notamment si le
-                    nombre d'oservations (nombre de lignes) est important
 
-            legend_label (boolean): affichage des correspondances indice et valeur de la variable d'observation 
-            (valable ssi labels_ind=True)
-                default: None
-                info: 
-                    - valeur acceptée : True or None
-                    - si True, une légende de correspondance entre index affiché sur le graphique et valeur réelle de la 
-                    variable d'observationb (en index) sera affichée sous le graphique
+                - valeur acceptée : True or None
+                - NB : si labels_ind = True, alors labels = False  (ne choisir que 1 de ces 2 possibilités)
+                - intérêt de cette option: facilite la lecture du graphique "Projection des individus", notamment si le
+                nombre d'oservations (nombre de lignes) est important
+
+            legend_label (boolean): affichage des correspondances indice et valeur de la variable d'observation (valable ssi labels_ind=True)
+
+                - valeur acceptée : True or None
+                - si True, une légende de correspondance entre index affiché sur le graphique et valeur réelle de la 
+                variable d'observationb (en index) sera affichée sous le graphique
 
             version_name (str): prefixer les graphiques par un nom particulier
-                default: None
-                info:
-                    valeur acceptée : string qui prefixera le nom des graphiques 
-                    ex : si version_name = "test1" alors le graphique "Eboulis des valeurs propres se nommera 
-                    "test1_recherche_nb_facteurs_optimal.png"
-                    intérêt: enregistrer tous les graphiques de différentes versions d'une même ACP
+
+                - valeur acceptée : string qui prefixera le nom des graphiques 
+
+                        ex : si version_name = "test1" alors le graphique "Eboulis des valeurs propres se nommera 
+                        "test1_recherche_nb_facteurs_optimal.png"
+
+                - intérêt: enregistrer tous les graphiques de différentes versions d'une même ACP
                 
             graph_only (boolean): afficher seulement les graphiques (cercle de corrélation et projection des individus)
-                default: None
-                info:
-                    - valeur acceptée : True or None
+
+                - valeur acceptée : True or None
 
             data_only (boolean): ne rien renvoyer lors de l'appel de la fonction
-                default: None
-                info: 
-                    - valeur acceptée : True or None
-                    - pour print un élément en particulier:
-                        * donner un nom à la fonction lors de l'appel
-                            ex : resultat_acp = acp_perso(df, data_only=True)
-                        * faire print(*resultat_acp)
+
+                - valeur acceptée : True or None
+                - pour print un élément en particulier:
+                    * donner un nom à la fonction lors de l'appel
+                        ex : resultat_acp = acp_perso(df, data_only=True)
+                    * faire print(*resultat_acp)
 
             color_titles (list): liste de 3 couleurs au format hexadécimale (ex "#FFFFFF") pour les titres h2, h3, h4
-                default: None
-                info: 
-                    - couleurs des titres par défaut : ["#b08c20", "#3aa237", "#29858a"]
 
-            palette_color = liste de couleurs au format hexadécimale (ex "#FFFFFF")pour les graphiques de l'ACP
-                default: None
-                info:
-                    - couleurs par défaut : ["#b30f1c", "#0e6667", "#3353e1", "#4ed147", "#d17e1a", "#2bb6b6",
-                    "#514a39", "#4ed147", "#acb073", "#8b3afd", "#dec11b", "#58f3e6", "#728e9d"]
+                - couleurs des titres par défaut : ["#b08c20", "#3aa237", "#29858a"]
 
-        Returns
-            all_values (dict): dictionnaire avec keys:
-                val_centre_reduit:              (DataFrame): df centré-réduit
-                valeurs_propres                 (list): valeurs propres
-                pct_inertie_par_facteur         (list): pourcentage d'inertie par facteur
-                nb_groupes_opt                  (str): path du graph "Eboulis des valeurs propres"
-                test_batons_brises              (DataFrame): df valeurs propres / valeurs de seuil par facteur
-                coord_fact_ind                  (DataFrame): coordonnées factorielles des individus
-                cos2_ind                        (DataFrame): cos² des individus pour chaque axe factoriel
-                contribution_ind                (DataFrame): df globale: contribution des individus aux axes
+            palette_color (list): liste de couleurs au format hexadécimale (ex "#FFFFFF")pour les graphiques de l'ACP
+
+                - couleurs par défaut : ["#b30f1c", "#0e6667", "#3353e1", "#4ed147", "#d17e1a", "#2bb6b6",
+                "#514a39", "#4ed147", "#acb073", "#8b3afd", "#dec11b", "#58f3e6", "#728e9d"]
+
+        Returns:
+
+            val_centre_reduit (DataFrame): df centré-réduit
+            valeurs_propres (list): valeurs propres
+            pct_inertie_par_facteur           (list): pourcentage d'inertie par facteur
+            nb_groupes_opt                    (str): path du graph "Eboulis des valeurs propres"
+            test_batons_brises                (DataFrame): df valeurs propres / valeurs de seuil par facteur
+            coord_fact_ind                    (DataFrame): coordonnées factorielles des individus
+            cos2_ind                          (DataFrame): cos² des individus pour chaque axe factoriel
+            contribution_ind                  (DataFrame): df globale: contribution des individus aux axes
+            ctr_ind_sorted_facteur_i          (DataFrame): df par facteur: les plus gros contributeurs à l'axe i
+
+                - pour tous les facteurs i
+
+            vecteurs_propres                  (DataFrame): vecteurs propres des variables par facteur
+            matrice_cor                       (array): matrice des corrélations des variables par facteur
+            cor_par_facteur                   (DataFrame): df de la matrice des corrélations                 
+            cos2_var                          (DataFrame): cos² des variables par axe factoriel
+            contribution_var                  (DataFrame): contribution des variables aux axes              
+            cor_par_facteur_VarQttiveIllus    (DataFrame): corrélations des variables quantitatives illustratives par axe
+            resultats_tests                   (list): résultats des différents tests interes (1 if ok else 0)
+            centroides_a_b                    (array): si clusters ou variable qualitative illustrative: coordonnées des centroïdes
+
+                - pour chaque plan factoriel [a,b]
+
+            graph_proj_ind_a_b                (str): path du graph de projection des individus
                 
-                pour tous les facteurs i:
-                    ctr_ind_sorted_facteur_i    (DataFrame): df par facteur: les plus gros contributeurs à l'axe i
+                - pour chaque plan factoriel [a,b]
 
-                vecteurs_propres                (DataFrame): vecteurs propres des variables par facteur
-                matrice_cor                     (array): matrice des corrélations des variables par facteur
-                cor_par_facteur                 (DataFrame): df de la matrice des corrélations                 
-                cos2_var                        (DataFrame): cos² des variables par axe factoriel
-                contribution_var                (DataFrame): contribution des variables aux axes                
-                cor_par_facteur_VarQttiveIllus  (DataFrame): corrélations des variables quantitatives illustratives par axe
-                resultats_tests                 (list): résultats des différents tests interes (1 if ok else 0)
-                
-                pour chaque plan factoriel [a,b]:
-                    centroides_a_b              (array): si clusters ou variable qualitative illustrative: coordonnées des centroïdes                  
-                    graph_proj_ind_a_b          (str): path du graph de projection des individus
-                    cercle_cor_a_b              (str): path du graph du cercle des corrélations
-                    graph_combo_a_b             (str): path du graph composé (cf. les 2 graphs précédents)
+            cercle_cor_a_b                    (str): path du graph du cercle des corrélations
 
-                select_obs                      (dict): dictionnaire :
-                                                    * key:
-                                                        - si labels=True        alors valeurs de la variable d'observation
-                                                        - si labels_ind = True  alors index des valeurs de la variable d'observation
-                                                    * value:
-                                                        - tuple composé de 2 df:
-                                                            - df données initiales de l'observation
-                                                            - df données calculées pour cette observation
-                                                                - ses coordonnées factorielles
-                                                                - sa qualité de représentation sur les différents axes (cf. COS²)
-                                                                - sa contribution aux différents axes
+                - pour chaque plan factoriel [a,b]
+
+            graph_combo_a_b                   (str): path du graph composé (cf. les 2 graphs précédents)
+
+                - pour chaque plan factoriel [a,b]
+
+            select_obs                        (dict): dictionnaire :
+
+                * key:
+                    - si labels=True        alors valeurs de la variable d'observation
+                    - si labels_ind = True  alors index des valeurs de la variable d'observation
+                        
+                * value:
+                    - tuple composé de 2 df:
+                        - df données initiales de l'observation
+                        - df données calculées pour cette observation
+                            - ses coordonnées factorielles
+                            - sa qualité de représentation sur les différents axes (cf. COS²)
+                            - sa contribution aux différents axes
 
     """
 
