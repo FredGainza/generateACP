@@ -1,0 +1,39 @@
+h2 {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    color: #0f9582;
+}
+
+h3 {
+    font-size: 1.4rem !important;
+}
+
+h4, h5 {
+    font-size: 1.15rem !important;
+}
+
+tr > td > code {
+    white-space: nowrap !important;
+}
+
+p > strong {
+    margin-bottom: 1rem;
+    font-size: 110%;
+    color:darkred;
+}
+
+p > em {
+    color:darkred;
+}
+
+.doc .doc-contents {
+    margin-top: 2rem;
+}
+
+.hljs-deletion {
+    background: #fff3e4 !important;
+}
+
+p > img {
+    vertical-align: sub;
+}
