@@ -1,6 +1,6 @@
 # generateACP
 
-![Badge KoPaTiK](https://img.shields.io/badge/KoPaTiK-Agency-blue "Badge KoPaTiK")
+![Badge KoPaTiK](https://img.shields.io/badge/KoPaTiK-Agency-blue "Badge KoPaTiK") [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FredGainza/generateACP.git/HEAD)
 
 *** 
 
@@ -81,4 +81,5 @@ RDV [ICI](https://FredGainza.github.io/generateACP/)
 
 ## Exemple
 
-Notebook disponible au format [html](https://kopadata.fr/data/analyse_ACP_exemple.html)
+* Notebook disponible au format [html](https://kopadata.fr/data/analyse_acp_exemple.html)
+* Notebook dispo sur [binder](https://mybinder.org/v2/gh/FredGainza/generateACP.git/HEAD) (exécutez le notebook *exemple_module_acp.ipynb* présent dans le dossier /docs/)

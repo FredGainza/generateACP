@@ -118,7 +118,7 @@ a:focus {
 }
 div#maintoolbar {
  position: absolute;
- width: 90%;
+ width: 80%;
  margin-left: -10%;
  padding-right: 8%;
  float: left;
@@ -2023,7 +2023,7 @@ pre {
  font-size: 10.0pt;
  line-height: 1.42857143;
  color: #303030;
- background-color: white;
+ border: 1px solid #e7e7e7;
  border-radius: 2px;
 }
 div.rendered_html {
@@ -17779,7 +17779,7 @@ a.anchor-link {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
-  background-color: #efefef;
+
 }
 
 .jp-OutputArea-output pre {
@@ -17893,9 +17893,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1>Table des matières<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"></ul></div>
-
+<h1 style="text-align: right;">Exemple d'utilisation du module genereteACP<span class="tocSkip"></span></h1>
 </div>
 </div>
 </div>
@@ -18276,7 +18274,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### La variable d&#39;observation est la variable &quot;ITEM&quot;</span>
-<span class="c1">### Il faut donc la mettre en index</span>
+<span class="c1">### On met donc cette variable en index</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;ITEM&quot;</span><span class="p">)</span>
 <span class="n">data</span>
@@ -19338,19 +19336,6 @@ On affiche les coordonnées factorielles de 3 individus (random)
   </thead>
   <tbody>
     <tr>
-      <th>Original_Chicken_Sandwichw/oMayo</th>
-      <td>1.2195</td>
-      <td>-0.9673</td>
-      <td>0.8821</td>
-      <td>-0.8138</td>
-      <td>1.0803</td>
-      <td>-0.1029</td>
-      <td>-0.1297</td>
-      <td>-0.0417</td>
-      <td>-0.0245</td>
-      <td>-0.0308</td>
-    </tr>
-    <tr>
       <th>GardenSalad(nochicken)</th>
       <td>5.1642</td>
       <td>-0.8198</td>
@@ -19375,6 +19360,19 @@ On affiche les coordonnées factorielles de 3 individus (random)
       <td>-0.1264</td>
       <td>-0.0162</td>
       <td>0.0033</td>
+    </tr>
+    <tr>
+      <th>Rodeo_Cheeseburger</th>
+      <td>-0.3609</td>
+      <td>0.1098</td>
+      <td>0.2119</td>
+      <td>0.0878</td>
+      <td>0.2258</td>
+      <td>-0.6122</td>
+      <td>-0.5672</td>
+      <td>0.0699</td>
+      <td>0.1138</td>
+      <td>-0.0033</td>
     </tr>
   </tbody>
 </table>
@@ -19439,18 +19437,18 @@ On affiche un random sur 3 individus de la mesure des COS²
   </thead>
   <tbody>
     <tr>
-      <th>11</th>
-      <td>MuffinBlueberry</td>
-      <td>0.1550</td>
-      <td>0.5614</td>
-      <td>0.0322</td>
-      <td>0.1643</td>
-      <td>0.0681</td>
-      <td>0.0186</td>
-      <td>0.0001</td>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>0.2938</td>
+      <td>0.1849</td>
+      <td>0.1537</td>
+      <td>0.1308</td>
+      <td>0.2306</td>
+      <td>0.0021</td>
+      <td>0.0033</td>
       <td>0.0003</td>
-      <td>0.0000</td>
-      <td>0.0000</td>
+      <td>0.0001</td>
+      <td>0.0002</td>
     </tr>
     <tr>
       <th>10</th>
@@ -19467,18 +19465,18 @@ On affiche un random sur 3 individus de la mesure des COS²
       <td>0.0000</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>Original_Chicken_Sandwichw/oMayo</td>
-      <td>0.2938</td>
-      <td>0.1849</td>
-      <td>0.1537</td>
-      <td>0.1308</td>
-      <td>0.2306</td>
-      <td>0.0021</td>
-      <td>0.0033</td>
-      <td>0.0003</td>
-      <td>0.0001</td>
-      <td>0.0002</td>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.7685</td>
+      <td>0.0861</td>
+      <td>0.1151</td>
+      <td>0.0152</td>
+      <td>0.0127</td>
+      <td>0.0015</td>
+      <td>0.0008</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
     </tr>
   </tbody>
 </table>
@@ -21358,7 +21356,7 @@ Ex : en supposant que le nom donné à l&#39;exécution de la fonction soit &#34
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -21441,13 +21439,14 @@ Ex : en supposant que le nom donné à l&#39;exécution de la fonction soit &#34
 </div>
 
 </div>
-<div class="jp-OutputArea-child">
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>---------------------------------------
+  <br>
 Données calculées Buck_Double
 </pre>
 </div>
@@ -21548,6 +21547,7243 @@ Données calculées Buck_Double
 </div>
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### La fonction retourne un dictionnaire avec les keys suivantes :</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">resultat_acp</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>val_centre_reduit
+valeurs_propres
+pct_inertie_par_facteur
+nb_groupes_opt
+test_batons_brises
+coord_fact_ind
+cos2_ind
+contribution_ind
+ctr_ind_sorted_facteur_1
+ctr_ind_sorted_facteur_2
+ctr_ind_sorted_facteur_3
+ctr_ind_sorted_facteur_4
+ctr_ind_sorted_facteur_5
+ctr_ind_sorted_facteur_6
+ctr_ind_sorted_facteur_7
+ctr_ind_sorted_facteur_8
+ctr_ind_sorted_facteur_9
+ctr_ind_sorted_facteur_10
+vecteurs_propres
+matrice_cor
+cor_par_facteur
+cos2_var
+contribution_var
+cor_par_facteur_VarQttiveIllus
+resultats_tests
+centroides_1_2
+graph_proj_ind_1_2
+graph_combo_1_2
+cercle_cor_1_2
+centroides_3_4
+graph_proj_ind_3_4
+graph_combo_3_4
+cercle_cor_3_4
+select_obs
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Rappel : un dossier &quot;apc_graphs&quot; est créé lors de l&#39;exécution de la fonction regroupant l&#39;ensemble des graphiques générés.</span>
+<span class="c1">### Soit dans l&#39;exemple :</span>
+
+<span class="n">keys_path_graphs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">keys_no_graphs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">resultat_acp</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;nb_groupes_opt&quot;</span> <span class="ow">or</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;graph_&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;cercle_&quot;</span><span class="p">):</span>
+        <span class="n">keys_path_graphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">keys_no_graphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Path des graphiques sauvegardés :&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys_path_graphs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - &quot;</span><span class="o">+</span><span class="n">resultat_acp</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Path des graphiques sauvegardés :
+ - apc_graphs/recherche_nb_facteurs_optimal
+ - apc_graphs/proj_ind_sur_1_et_2.png
+ - apc_graphs/graph_combo_1_et_2.png
+ - apc_graphs/cercle_cor_1_et_2.png
+ - apc_graphs/proj_ind_sur_3_et_4.png
+ - apc_graphs/graph_combo_3_et_4.png
+ - apc_graphs/cercle_cor_3_et_4.png
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Pour les autres keys du dictionnaire rencvoyé par la fonction, affichons le résultat obtenu</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys_no_graphs</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="s2">&quot;select_obs&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">resultat_acp</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>val_centre_reduit
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.8363</td>
+      <td>1.1896</td>
+      <td>1.3756</td>
+      <td>1.2356</td>
+      <td>1.8103</td>
+      <td>1.4300</td>
+      <td>0.6512</td>
+      <td>-0.6116</td>
+      <td>-0.9682</td>
+      <td>-0.3699</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>0.4726</td>
+      <td>0.5774</td>
+      <td>1.1993</td>
+      <td>0.5878</td>
+      <td>-0.7248</td>
+      <td>-0.0200</td>
+      <td>2.4241</td>
+      <td>-0.4164</td>
+      <td>0.8453</td>
+      <td>-0.7511</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>0.0468</td>
+      <td>0.0736</td>
+      <td>0.9400</td>
+      <td>0.0454</td>
+      <td>0.7750</td>
+      <td>0.9759</td>
+      <td>-0.0072</td>
+      <td>-0.5206</td>
+      <td>-0.8914</td>
+      <td>-0.3974</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.6661</td>
+      <td>1.0193</td>
+      <td>-0.4256</td>
+      <td>1.0473</td>
+      <td>-0.6230</td>
+      <td>-0.3776</td>
+      <td>-0.1994</td>
+      <td>0.1362</td>
+      <td>-0.7838</td>
+      <td>-0.5054</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>-1.0827</td>
+      <td>-1.5724</td>
+      <td>-1.4346</td>
+      <td>-1.5610</td>
+      <td>-0.2337</td>
+      <td>-0.9854</td>
+      <td>-1.6698</td>
+      <td>0.7039</td>
+      <td>-0.9682</td>
+      <td>2.0493</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>1.3710</td>
+      <td>0.6406</td>
+      <td>-1.1874</td>
+      <td>0.6103</td>
+      <td>1.4298</td>
+      <td>-1.3406</td>
+      <td>-0.3150</td>
+      <td>2.3910</td>
+      <td>-0.6609</td>
+      <td>1.6802</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.0919</td>
+      <td>0.2249</td>
+      <td>0.9420</td>
+      <td>0.2665</td>
+      <td>1.0803</td>
+      <td>1.0576</td>
+      <td>0.4541</td>
+      <td>-0.5927</td>
+      <td>-0.9682</td>
+      <td>-0.4294</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>-0.1120</td>
+      <td>-0.2512</td>
+      <td>0.9157</td>
+      <td>-0.2292</td>
+      <td>0.3990</td>
+      <td>0.7043</td>
+      <td>-0.5633</td>
+      <td>-0.3822</td>
+      <td>-0.8145</td>
+      <td>-0.3633</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>0.3207</td>
+      <td>0.5053</td>
+      <td>1.3330</td>
+      <td>0.5032</td>
+      <td>1.3944</td>
+      <td>1.1714</td>
+      <td>0.8207</td>
+      <td>-0.6817</td>
+      <td>-1.0143</td>
+      <td>-0.3897</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>-2.6125</td>
+      <td>-1.9329</td>
+      <td>-1.6372</td>
+      <td>-1.9324</td>
+      <td>-1.3442</td>
+      <td>-1.2356</td>
+      <td>-2.0228</td>
+      <td>-1.7907</td>
+      <td>0.9836</td>
+      <td>-0.6805</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>-1.4029</td>
+      <td>-1.5846</td>
+      <td>-0.8835</td>
+      <td>-1.5955</td>
+      <td>-1.4371</td>
+      <td>-1.1112</td>
+      <td>-0.8373</td>
+      <td>-0.3548</td>
+      <td>-0.5072</td>
+      <td>-0.3291</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>1.3174</td>
+      <td>1.2062</td>
+      <td>-1.2421</td>
+      <td>1.1561</td>
+      <td>-0.2647</td>
+      <td>1.9705</td>
+      <td>-0.5741</td>
+      <td>1.8261</td>
+      <td>0.8606</td>
+      <td>2.5957</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>-0.4259</td>
+      <td>-0.9375</td>
+      <td>0.4213</td>
+      <td>-0.9046</td>
+      <td>-1.2114</td>
+      <td>-0.4226</td>
+      <td>0.8280</td>
+      <td>0.0945</td>
+      <td>0.5686</td>
+      <td>-0.5836</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.2183</td>
+      <td>0.0434</td>
+      <td>0.3950</td>
+      <td>-0.0651</td>
+      <td>0.3945</td>
+      <td>0.1104</td>
+      <td>-0.0052</td>
+      <td>0.5400</td>
+      <td>0.5379</td>
+      <td>-0.0416</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>1.0150</td>
+      <td>1.4487</td>
+      <td>-0.2007</td>
+      <td>1.4515</td>
+      <td>-0.3974</td>
+      <td>-0.4978</td>
+      <td>0.6236</td>
+      <td>0.1694</td>
+      <td>0.3996</td>
+      <td>-0.4922</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>0.0919</td>
+      <td>-0.5015</td>
+      <td>-0.0042</td>
+      <td>-0.5401</td>
+      <td>-1.0566</td>
+      <td>-0.7077</td>
+      <td>0.5845</td>
+      <td>0.7096</td>
+      <td>0.8299</td>
+      <td>-0.4294</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>-0.8118</td>
+      <td>-0.1489</td>
+      <td>-0.5066</td>
+      <td>-0.0755</td>
+      <td>0.0096</td>
+      <td>-0.7216</td>
+      <td>-0.1922</td>
+      <td>-1.2201</td>
+      <td>2.5512</td>
+      <td>-0.5627</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>valeurs_propres
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>array([4.52737681e+00, 2.44546345e+00, 1.41010602e+00, 6.73523328e-01,
+       4.83586846e-01, 3.46791440e-01, 9.39735274e-02, 1.76900742e-02,
+       1.23762760e-03, 2.50881956e-04])</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>pct_inertie_par_facteur
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>array([4.52737681e+01, 2.44546345e+01, 1.41010602e+01, 6.73523328e+00,
+       4.83586846e+00, 3.46791440e+00, 9.39735274e-01, 1.76900742e-01,
+       1.23762760e-02, 2.50881956e-03])</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>test_batons_brises
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Val.Propre</th>
+      <th>Seuils</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4.5274</td>
+      <td>2.9290</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.4455</td>
+      <td>1.9290</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.4101</td>
+      <td>1.4290</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.6735</td>
+      <td>1.0956</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.4836</td>
+      <td>0.8456</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.3468</td>
+      <td>0.6456</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.0940</td>
+      <td>0.4790</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.0177</td>
+      <td>0.3361</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.0012</td>
+      <td>0.2111</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.0003</td>
+      <td>0.1000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>coord_fact_ind
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>F1</th>
+      <th>F2</th>
+      <th>F3</th>
+      <th>F4</th>
+      <th>F5</th>
+      <th>F6</th>
+      <th>F7</th>
+      <th>F8</th>
+      <th>F9</th>
+      <th>F10</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>BK__Double_Stacker</th>
+      <td>-3.1275</td>
+      <td>-1.0466</td>
+      <td>-1.2105</td>
+      <td>0.4395</td>
+      <td>-0.4025</td>
+      <td>-0.1397</td>
+      <td>0.1040</td>
+      <td>0.0001</td>
+      <td>-0.0137</td>
+      <td>-0.0089</td>
+    </tr>
+    <tr>
+      <th>BK_CHICKENFRIES(12pc)</th>
+      <td>-1.3666</td>
+      <td>-1.8330</td>
+      <td>1.8948</td>
+      <td>-0.6543</td>
+      <td>0.7117</td>
+      <td>-0.1339</td>
+      <td>0.6427</td>
+      <td>0.1021</td>
+      <td>0.0247</td>
+      <td>0.0104</td>
+    </tr>
+    <tr>
+      <th>Buck_Double</th>
+      <td>-0.9714</td>
+      <td>-0.9255</td>
+      <td>-1.3342</td>
+      <td>0.1598</td>
+      <td>0.1569</td>
+      <td>0.0950</td>
+      <td>-0.1691</td>
+      <td>0.0030</td>
+      <td>-0.0208</td>
+      <td>0.0344</td>
+    </tr>
+    <tr>
+      <th>CHICKENTENDERS_Sandwich</th>
+      <td>-0.7845</td>
+      <td>0.3468</td>
+      <td>0.4545</td>
+      <td>-0.5039</td>
+      <td>-1.0555</td>
+      <td>1.3786</td>
+      <td>-0.0793</td>
+      <td>0.0424</td>
+      <td>0.0070</td>
+      <td>-0.0176</td>
+    </tr>
+    <tr>
+      <th>ChocolateFudgeSundae</th>
+      <td>2.8711</td>
+      <td>2.4620</td>
+      <td>-1.6100</td>
+      <td>-0.4032</td>
+      <td>0.3753</td>
+      <td>-0.2359</td>
+      <td>0.5164</td>
+      <td>0.2518</td>
+      <td>0.0064</td>
+      <td>-0.0054</td>
+    </tr>
+    <tr>
+      <th>DanishApple</th>
+      <td>-1.1749</td>
+      <td>3.4865</td>
+      <td>-0.0173</td>
+      <td>-1.2038</td>
+      <td>-0.9876</td>
+      <td>-1.0056</td>
+      <td>-0.0391</td>
+      <td>-0.1264</td>
+      <td>-0.0162</td>
+      <td>0.0033</td>
+    </tr>
+    <tr>
+      <th>Double_Cheeseburger</th>
+      <td>-1.4214</td>
+      <td>-1.0827</td>
+      <td>-1.3058</td>
+      <td>0.1022</td>
+      <td>0.0834</td>
+      <td>-0.0635</td>
+      <td>0.1183</td>
+      <td>-0.2198</td>
+      <td>0.0043</td>
+      <td>-0.0279</td>
+    </tr>
+    <tr>
+      <th>Double_Hamburger</th>
+      <td>-0.2617</td>
+      <td>-0.7160</td>
+      <td>-1.3675</td>
+      <td>0.1023</td>
+      <td>0.2089</td>
+      <td>0.2123</td>
+      <td>-0.4979</td>
+      <td>0.2841</td>
+      <td>-0.0403</td>
+      <td>-0.0032</td>
+    </tr>
+    <tr>
+      <th>Double_Bacon_Cheeseburger</th>
+      <td>-2.1078</td>
+      <td>-1.3087</td>
+      <td>-1.3095</td>
+      <td>0.0595</td>
+      <td>0.0837</td>
+      <td>-0.2525</td>
+      <td>0.2635</td>
+      <td>-0.0979</td>
+      <td>0.0132</td>
+      <td>0.0140</td>
+    </tr>
+    <tr>
+      <th>GardenSalad(nochicken)</th>
+      <td>5.1642</td>
+      <td>-0.8198</td>
+      <td>-0.2854</td>
+      <td>1.0558</td>
+      <td>-0.6561</td>
+      <td>0.2270</td>
+      <td>0.0461</td>
+      <td>-0.1255</td>
+      <td>0.0261</td>
+      <td>0.0080</td>
+    </tr>
+    <tr>
+      <th>KRAFT_MacaroniandCheese</th>
+      <td>3.3203</td>
+      <td>-0.1485</td>
+      <td>-0.4717</td>
+      <td>-0.7834</td>
+      <td>0.1774</td>
+      <td>0.5999</td>
+      <td>0.0623</td>
+      <td>-0.1405</td>
+      <td>-0.0016</td>
+      <td>0.0077</td>
+    </tr>
+    <tr>
+      <th>MuffinBlueberry</th>
+      <td>-1.8115</td>
+      <td>3.4469</td>
+      <td>0.8257</td>
+      <td>1.8648</td>
+      <td>1.2006</td>
+      <td>0.6276</td>
+      <td>0.0361</td>
+      <td>-0.0813</td>
+      <td>-0.0054</td>
+      <td>0.0016</td>
+    </tr>
+    <tr>
+      <th>Original_Chicken_Sandwichw/oMayo</th>
+      <td>1.2195</td>
+      <td>-0.9673</td>
+      <td>0.8821</td>
+      <td>-0.8138</td>
+      <td>1.0803</td>
+      <td>-0.1029</td>
+      <td>-0.1297</td>
+      <td>-0.0417</td>
+      <td>-0.0245</td>
+      <td>-0.0308</td>
+    </tr>
+    <tr>
+      <th>Rodeo_Cheeseburger</th>
+      <td>-0.3609</td>
+      <td>0.1098</td>
+      <td>0.2119</td>
+      <td>0.0878</td>
+      <td>0.2258</td>
+      <td>-0.6122</td>
+      <td>-0.5672</td>
+      <td>0.0699</td>
+      <td>0.1138</td>
+      <td>-0.0033</td>
+    </tr>
+    <tr>
+      <th>SpicyCHICK_NCRISP_Sandwich</th>
+      <td>-1.4813</td>
+      <td>0.0962</td>
+      <td>1.6639</td>
+      <td>-0.2130</td>
+      <td>-1.0292</td>
+      <td>0.6416</td>
+      <td>0.0681</td>
+      <td>0.0903</td>
+      <td>0.0082</td>
+      <td>0.0097</td>
+    </tr>
+    <tr>
+      <th>SpicyCHICK_NCRISP_Sandwichw/oMayo</th>
+      <td>0.8444</td>
+      <td>-0.1092</td>
+      <td>1.3647</td>
+      <td>-0.8195</td>
+      <td>0.6361</td>
+      <td>-0.1691</td>
+      <td>-0.4308</td>
+      <td>-0.0877</td>
+      <td>-0.0392</td>
+      <td>0.0171</td>
+    </tr>
+    <tr>
+      <th>Tacos(2)</th>
+      <td>1.4500</td>
+      <td>-0.9910</td>
+      <td>1.6146</td>
+      <td>1.5231</td>
+      <td>-0.8092</td>
+      <td>-1.0666</td>
+      <td>0.0556</td>
+      <td>0.0771</td>
+      <td>-0.0421</td>
+      <td>-0.0090</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>cos2_ind
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>F1</th>
+      <th>F2</th>
+      <th>F3</th>
+      <th>F4</th>
+      <th>F5</th>
+      <th>F6</th>
+      <th>F7</th>
+      <th>F8</th>
+      <th>F9</th>
+      <th>F10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.7685</td>
+      <td>0.0861</td>
+      <td>0.1151</td>
+      <td>0.0152</td>
+      <td>0.0127</td>
+      <td>0.0015</td>
+      <td>0.0008</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>0.1832</td>
+      <td>0.3296</td>
+      <td>0.3522</td>
+      <td>0.0420</td>
+      <td>0.0497</td>
+      <td>0.0018</td>
+      <td>0.0405</td>
+      <td>0.0010</td>
+      <td>0.0001</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>0.2571</td>
+      <td>0.2334</td>
+      <td>0.4851</td>
+      <td>0.0070</td>
+      <td>0.0067</td>
+      <td>0.0025</td>
+      <td>0.0078</td>
+      <td>0.0000</td>
+      <td>0.0001</td>
+      <td>0.0003</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.1459</td>
+      <td>0.0285</td>
+      <td>0.0490</td>
+      <td>0.0602</td>
+      <td>0.2640</td>
+      <td>0.4505</td>
+      <td>0.0015</td>
+      <td>0.0004</td>
+      <td>0.0000</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>0.4687</td>
+      <td>0.3447</td>
+      <td>0.1474</td>
+      <td>0.0092</td>
+      <td>0.0080</td>
+      <td>0.0032</td>
+      <td>0.0152</td>
+      <td>0.0036</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>0.0812</td>
+      <td>0.7155</td>
+      <td>0.0000</td>
+      <td>0.0853</td>
+      <td>0.0574</td>
+      <td>0.0595</td>
+      <td>0.0001</td>
+      <td>0.0009</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.4055</td>
+      <td>0.2353</td>
+      <td>0.3423</td>
+      <td>0.0021</td>
+      <td>0.0014</td>
+      <td>0.0008</td>
+      <td>0.0028</td>
+      <td>0.0097</td>
+      <td>0.0000</td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>0.0238</td>
+      <td>0.1780</td>
+      <td>0.6492</td>
+      <td>0.0036</td>
+      <td>0.0151</td>
+      <td>0.0156</td>
+      <td>0.0860</td>
+      <td>0.0280</td>
+      <td>0.0006</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>0.5537</td>
+      <td>0.2134</td>
+      <td>0.2137</td>
+      <td>0.0004</td>
+      <td>0.0009</td>
+      <td>0.0079</td>
+      <td>0.0087</td>
+      <td>0.0012</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>0.9184</td>
+      <td>0.0231</td>
+      <td>0.0028</td>
+      <td>0.0384</td>
+      <td>0.0148</td>
+      <td>0.0018</td>
+      <td>0.0001</td>
+      <td>0.0005</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>0.8965</td>
+      <td>0.0018</td>
+      <td>0.0181</td>
+      <td>0.0499</td>
+      <td>0.0026</td>
+      <td>0.0293</td>
+      <td>0.0003</td>
+      <td>0.0016</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>0.1550</td>
+      <td>0.5614</td>
+      <td>0.0322</td>
+      <td>0.1643</td>
+      <td>0.0681</td>
+      <td>0.0186</td>
+      <td>0.0001</td>
+      <td>0.0003</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>0.2938</td>
+      <td>0.1849</td>
+      <td>0.1537</td>
+      <td>0.1308</td>
+      <td>0.2306</td>
+      <td>0.0021</td>
+      <td>0.0033</td>
+      <td>0.0003</td>
+      <td>0.0001</td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.1356</td>
+      <td>0.0126</td>
+      <td>0.0468</td>
+      <td>0.0080</td>
+      <td>0.0531</td>
+      <td>0.3903</td>
+      <td>0.3350</td>
+      <td>0.0051</td>
+      <td>0.0135</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>0.3375</td>
+      <td>0.0014</td>
+      <td>0.4258</td>
+      <td>0.0070</td>
+      <td>0.1629</td>
+      <td>0.0633</td>
+      <td>0.0007</td>
+      <td>0.0013</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>0.1834</td>
+      <td>0.0031</td>
+      <td>0.4791</td>
+      <td>0.1728</td>
+      <td>0.1041</td>
+      <td>0.0074</td>
+      <td>0.0477</td>
+      <td>0.0020</td>
+      <td>0.0004</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>0.2142</td>
+      <td>0.1001</td>
+      <td>0.2656</td>
+      <td>0.2364</td>
+      <td>0.0667</td>
+      <td>0.1159</td>
+      <td>0.0003</td>
+      <td>0.0006</td>
+      <td>0.0002</td>
+      <td>0.0000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>contribution_ind
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>F1</th>
+      <th>F2</th>
+      <th>F3</th>
+      <th>F4</th>
+      <th>F5</th>
+      <th>F6</th>
+      <th>F7</th>
+      <th>F8</th>
+      <th>F9</th>
+      <th>F10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.1271</td>
+      <td>0.0263</td>
+      <td>0.0611</td>
+      <td>0.0169</td>
+      <td>0.0197</td>
+      <td>0.0033</td>
+      <td>0.0068</td>
+      <td>0.0000</td>
+      <td>0.0089</td>
+      <td>0.0186</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>0.0243</td>
+      <td>0.0808</td>
+      <td>0.1498</td>
+      <td>0.0374</td>
+      <td>0.0616</td>
+      <td>0.0030</td>
+      <td>0.2586</td>
+      <td>0.0347</td>
+      <td>0.0290</td>
+      <td>0.0253</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>0.0123</td>
+      <td>0.0206</td>
+      <td>0.0743</td>
+      <td>0.0022</td>
+      <td>0.0030</td>
+      <td>0.0015</td>
+      <td>0.0179</td>
+      <td>0.0000</td>
+      <td>0.0205</td>
+      <td>0.2782</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.0080</td>
+      <td>0.0029</td>
+      <td>0.0086</td>
+      <td>0.0222</td>
+      <td>0.1355</td>
+      <td>0.3224</td>
+      <td>0.0039</td>
+      <td>0.0060</td>
+      <td>0.0023</td>
+      <td>0.0725</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>0.1071</td>
+      <td>0.1458</td>
+      <td>0.1081</td>
+      <td>0.0142</td>
+      <td>0.0171</td>
+      <td>0.0094</td>
+      <td>0.1669</td>
+      <td>0.2108</td>
+      <td>0.0019</td>
+      <td>0.0069</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>0.0179</td>
+      <td>0.2924</td>
+      <td>0.0000</td>
+      <td>0.1266</td>
+      <td>0.1186</td>
+      <td>0.1715</td>
+      <td>0.0010</td>
+      <td>0.0531</td>
+      <td>0.0125</td>
+      <td>0.0026</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.0263</td>
+      <td>0.0282</td>
+      <td>0.0711</td>
+      <td>0.0009</td>
+      <td>0.0008</td>
+      <td>0.0007</td>
+      <td>0.0088</td>
+      <td>0.1606</td>
+      <td>0.0009</td>
+      <td>0.1827</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>0.0009</td>
+      <td>0.0123</td>
+      <td>0.0780</td>
+      <td>0.0009</td>
+      <td>0.0053</td>
+      <td>0.0076</td>
+      <td>0.1552</td>
+      <td>0.2684</td>
+      <td>0.0772</td>
+      <td>0.0024</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>0.0577</td>
+      <td>0.0412</td>
+      <td>0.0715</td>
+      <td>0.0003</td>
+      <td>0.0009</td>
+      <td>0.0108</td>
+      <td>0.0435</td>
+      <td>0.0319</td>
+      <td>0.0083</td>
+      <td>0.0463</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>0.3465</td>
+      <td>0.0162</td>
+      <td>0.0034</td>
+      <td>0.0974</td>
+      <td>0.0524</td>
+      <td>0.0087</td>
+      <td>0.0013</td>
+      <td>0.0524</td>
+      <td>0.0324</td>
+      <td>0.0150</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>0.1432</td>
+      <td>0.0005</td>
+      <td>0.0093</td>
+      <td>0.0536</td>
+      <td>0.0038</td>
+      <td>0.0610</td>
+      <td>0.0024</td>
+      <td>0.0657</td>
+      <td>0.0001</td>
+      <td>0.0139</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>0.0426</td>
+      <td>0.2858</td>
+      <td>0.0284</td>
+      <td>0.3037</td>
+      <td>0.1753</td>
+      <td>0.0668</td>
+      <td>0.0008</td>
+      <td>0.0220</td>
+      <td>0.0014</td>
+      <td>0.0006</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>0.0193</td>
+      <td>0.0225</td>
+      <td>0.0325</td>
+      <td>0.0578</td>
+      <td>0.1420</td>
+      <td>0.0018</td>
+      <td>0.0105</td>
+      <td>0.0058</td>
+      <td>0.0285</td>
+      <td>0.2231</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.0017</td>
+      <td>0.0003</td>
+      <td>0.0019</td>
+      <td>0.0007</td>
+      <td>0.0062</td>
+      <td>0.0636</td>
+      <td>0.2014</td>
+      <td>0.0163</td>
+      <td>0.6159</td>
+      <td>0.0026</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>0.0285</td>
+      <td>0.0002</td>
+      <td>0.1155</td>
+      <td>0.0040</td>
+      <td>0.1288</td>
+      <td>0.0698</td>
+      <td>0.0029</td>
+      <td>0.0271</td>
+      <td>0.0032</td>
+      <td>0.0220</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>0.0093</td>
+      <td>0.0003</td>
+      <td>0.0777</td>
+      <td>0.0587</td>
+      <td>0.0492</td>
+      <td>0.0048</td>
+      <td>0.1162</td>
+      <td>0.0256</td>
+      <td>0.0730</td>
+      <td>0.0683</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>0.0273</td>
+      <td>0.0236</td>
+      <td>0.1088</td>
+      <td>0.2026</td>
+      <td>0.0797</td>
+      <td>0.1930</td>
+      <td>0.0019</td>
+      <td>0.0198</td>
+      <td>0.0841</td>
+      <td>0.0191</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_1
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>34.65%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>14.32%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>12.71%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>10.71%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>5.77%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>4.26%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>2.85%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>2.73%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>2.63%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>2.43%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>1.93%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>1.79%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>1.23%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>0.93%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.8%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.17%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>0.09%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_2
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>29.24%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>28.58%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>14.58%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>8.08%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>4.12%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>2.82%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>2.63%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>2.36%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>2.25%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>2.06%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>1.62%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>1.23%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.29%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>0.05%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.03%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>0.03%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>0.02%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_3
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>14.98%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>11.55%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>10.88%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>10.81%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>7.8%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>7.77%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>7.43%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>7.15%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>7.11%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>6.11%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>3.25%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>2.84%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>0.93%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.86%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>0.34%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.19%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>0.0%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_4
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>30.37%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>20.26%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>12.66%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>9.74%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>5.87%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>5.78%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>5.36%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>3.74%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>2.22%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>1.69%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>1.42%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>0.4%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>0.22%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>0.09%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.09%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.07%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>0.03%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_5
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>17.53%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>14.2%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>13.55%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>12.88%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>11.86%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>7.97%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>6.16%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>5.24%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>4.92%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>1.97%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>1.71%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.62%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>0.53%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>0.38%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>0.3%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>0.09%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.08%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_6
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>32.24%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>19.3%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>17.15%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>6.98%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>6.68%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>6.36%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>6.1%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>1.08%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>0.94%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>0.87%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>0.76%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>0.48%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.33%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>0.3%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>0.18%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>0.15%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.07%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_7
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>25.86%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>20.14%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>16.69%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>15.52%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>11.62%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>4.35%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>1.79%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>1.05%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.88%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.68%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.39%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>0.29%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>0.24%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>0.19%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>0.13%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>0.1%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>0.08%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_8
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F8</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>26.84%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>21.08%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>16.06%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>6.57%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>5.31%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>5.24%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>3.47%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>3.19%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>2.71%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>2.56%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>2.2%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>1.98%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>1.63%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.6%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>0.58%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>0.0%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.0%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_9
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>61.59%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>8.41%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>7.72%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>7.3%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>3.24%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>2.9%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>2.85%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>2.05%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>1.25%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>0.89%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>0.83%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>0.32%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>0.23%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>0.19%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>0.14%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>0.09%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>0.01%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ctr_ind_sorted_facteur_10
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>CTR_F10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Buck_Double</td>
+      <td>27.82%</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Original_Chicken_Sandwichw/oMayo</td>
+      <td>22.31%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Double_Cheeseburger</td>
+      <td>18.27%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CHICKENTENDERS_Sandwich</td>
+      <td>7.25%</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SpicyCHICK_NCRISP_Sandwichw/oMayo</td>
+      <td>6.83%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Double_Bacon_Cheeseburger</td>
+      <td>4.63%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BK_CHICKENFRIES(12pc)</td>
+      <td>2.53%</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>SpicyCHICK_NCRISP_Sandwich</td>
+      <td>2.2%</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Tacos(2)</td>
+      <td>1.91%</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>BK__Double_Stacker</td>
+      <td>1.86%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GardenSalad(nochicken)</td>
+      <td>1.5%</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KRAFT_MacaroniandCheese</td>
+      <td>1.39%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ChocolateFudgeSundae</td>
+      <td>0.69%</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Rodeo_Cheeseburger</td>
+      <td>0.26%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DanishApple</td>
+      <td>0.26%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Double_Hamburger</td>
+      <td>0.24%</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MuffinBlueberry</td>
+      <td>0.06%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>vecteurs_propres
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>F1</th>
+      <th>F2</th>
+      <th>F3</th>
+      <th>F4</th>
+      <th>F5</th>
+      <th>F6</th>
+      <th>F7</th>
+      <th>F8</th>
+      <th>F9</th>
+      <th>F10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Calories</td>
+      <td>-0.4296</td>
+      <td>0.2006</td>
+      <td>0.1721</td>
+      <td>-0.1600</td>
+      <td>-0.0168</td>
+      <td>0.0531</td>
+      <td>-0.2353</td>
+      <td>0.0646</td>
+      <td>-0.7173</td>
+      <td>0.3779</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Fat_Cal</td>
+      <td>-0.4332</td>
+      <td>0.0686</td>
+      <td>0.2040</td>
+      <td>0.1420</td>
+      <td>-0.3167</td>
+      <td>0.2223</td>
+      <td>0.0680</td>
+      <td>0.0934</td>
+      <td>0.5722</td>
+      <td>0.5054</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Protein</td>
+      <td>-0.2968</td>
+      <td>-0.4435</td>
+      <td>-0.1494</td>
+      <td>-0.1681</td>
+      <td>0.3037</td>
+      <td>-0.1821</td>
+      <td>-0.2460</td>
+      <td>0.6741</td>
+      <td>0.1408</td>
+      <td>-0.0671</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fat</td>
+      <td>-0.4324</td>
+      <td>0.0577</td>
+      <td>0.2021</td>
+      <td>0.1468</td>
+      <td>-0.3339</td>
+      <td>0.2247</td>
+      <td>0.1244</td>
+      <td>0.1335</td>
+      <td>-0.1013</td>
+      <td>-0.7361</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sat_Fat</td>
+      <td>-0.3249</td>
+      <td>0.0317</td>
+      <td>-0.4398</td>
+      <td>0.1322</td>
+      <td>-0.3474</td>
+      <td>-0.7118</td>
+      <td>-0.0239</td>
+      <td>-0.2334</td>
+      <td>0.0066</td>
+      <td>-0.0080</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Chol</td>
+      <td>-0.3327</td>
+      <td>-0.0876</td>
+      <td>-0.2635</td>
+      <td>0.5616</td>
+      <td>0.5405</td>
+      <td>0.2676</td>
+      <td>-0.1280</td>
+      <td>-0.3411</td>
+      <td>-0.0048</td>
+      <td>-0.0181</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Sodium</td>
+      <td>-0.3082</td>
+      <td>-0.2975</td>
+      <td>0.3451</td>
+      <td>-0.3703</td>
+      <td>0.3180</td>
+      <td>-0.2093</td>
+      <td>0.5337</td>
+      <td>-0.3598</td>
+      <td>0.0316</td>
+      <td>-0.0089</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Carbs</td>
+      <td>-0.1398</td>
+      <td>0.5470</td>
+      <td>0.1413</td>
+      <td>-0.3636</td>
+      <td>0.2717</td>
+      <td>-0.1163</td>
+      <td>-0.4773</td>
+      <td>-0.1862</td>
+      <td>0.3550</td>
+      <td>-0.2308</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Fiber</td>
+      <td>0.1458</td>
+      <td>-0.0613</td>
+      <td>0.6710</td>
+      <td>0.5208</td>
+      <td>0.0873</td>
+      <td>-0.4477</td>
+      <td>-0.1987</td>
+      <td>0.0744</td>
+      <td>-0.0207</td>
+      <td>0.0042</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Sugar</td>
+      <td>-0.0267</td>
+      <td>0.5957</td>
+      <td>-0.1160</td>
+      <td>0.1762</td>
+      <td>0.3168</td>
+      <td>-0.1674</td>
+      <td>0.5431</td>
+      <td>0.4176</td>
+      <td>-0.0230</td>
+      <td>0.0416</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>matrice_cor
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>array([[-9.141e-01,  3.138e-01,  2.044e-01, -1.313e-01, -1.170e-02,
+         3.120e-02, -7.210e-02,  8.600e-03, -2.520e-02,  6.000e-03],
+       [-9.217e-01,  1.072e-01,  2.423e-01,  1.165e-01, -2.202e-01,
+         1.309e-01,  2.080e-02,  1.240e-02,  2.010e-02,  8.000e-03],
+       [-6.314e-01, -6.935e-01, -1.774e-01, -1.380e-01,  2.112e-01,
+        -1.073e-01, -7.540e-02,  8.970e-02,  5.000e-03, -1.100e-03],
+       [-9.200e-01,  9.030e-02,  2.400e-01,  1.205e-01, -2.322e-01,
+         1.323e-01,  3.820e-02,  1.780e-02, -3.600e-03, -1.170e-02],
+       [-6.914e-01,  4.950e-02, -5.222e-01,  1.085e-01, -2.416e-01,
+        -4.192e-01, -7.300e-03, -3.100e-02,  2.000e-04, -1.000e-04],
+       [-7.080e-01, -1.369e-01, -3.129e-01,  4.609e-01,  3.758e-01,
+         1.576e-01, -3.920e-02, -4.540e-02, -2.000e-04, -3.000e-04],
+       [-6.558e-01, -4.653e-01,  4.098e-01, -3.039e-01,  2.211e-01,
+        -1.232e-01,  1.636e-01, -4.780e-02,  1.100e-03, -1.000e-04],
+       [-2.975e-01,  8.554e-01,  1.678e-01, -2.984e-01,  1.889e-01,
+        -6.850e-02, -1.463e-01, -2.480e-02,  1.250e-02, -3.700e-03],
+       [ 3.102e-01, -9.580e-02,  7.968e-01,  4.274e-01,  6.070e-02,
+        -2.636e-01, -6.090e-02,  9.900e-03, -7.000e-04,  1.000e-04],
+       [-5.680e-02,  9.316e-01, -1.377e-01,  1.446e-01,  2.203e-01,
+        -9.860e-02,  1.665e-01,  5.550e-02, -8.000e-04,  7.000e-04]])</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>cor_par_facteur
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>COR_F1</th>
+      <th>COR_F2</th>
+      <th>COR_F3</th>
+      <th>COR_F4</th>
+      <th>COR_F5</th>
+      <th>COR_F6</th>
+      <th>COR_F7</th>
+      <th>COR_F8</th>
+      <th>COR_F9</th>
+      <th>COR_F10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Calories</td>
+      <td>-0.9141</td>
+      <td>0.3138</td>
+      <td>0.2044</td>
+      <td>-0.1313</td>
+      <td>-0.0117</td>
+      <td>0.0312</td>
+      <td>-0.0721</td>
+      <td>0.0086</td>
+      <td>-0.0252</td>
+      <td>0.0060</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Fat_Cal</td>
+      <td>-0.9217</td>
+      <td>0.1072</td>
+      <td>0.2423</td>
+      <td>0.1165</td>
+      <td>-0.2202</td>
+      <td>0.1309</td>
+      <td>0.0208</td>
+      <td>0.0124</td>
+      <td>0.0201</td>
+      <td>0.0080</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Protein</td>
+      <td>-0.6314</td>
+      <td>-0.6935</td>
+      <td>-0.1774</td>
+      <td>-0.1380</td>
+      <td>0.2112</td>
+      <td>-0.1073</td>
+      <td>-0.0754</td>
+      <td>0.0897</td>
+      <td>0.0050</td>
+      <td>-0.0011</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fat</td>
+      <td>-0.9200</td>
+      <td>0.0903</td>
+      <td>0.2400</td>
+      <td>0.1205</td>
+      <td>-0.2322</td>
+      <td>0.1323</td>
+      <td>0.0382</td>
+      <td>0.0178</td>
+      <td>-0.0036</td>
+      <td>-0.0117</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sat_Fat</td>
+      <td>-0.6914</td>
+      <td>0.0495</td>
+      <td>-0.5222</td>
+      <td>0.1085</td>
+      <td>-0.2416</td>
+      <td>-0.4192</td>
+      <td>-0.0073</td>
+      <td>-0.0310</td>
+      <td>0.0002</td>
+      <td>-0.0001</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Chol</td>
+      <td>-0.7080</td>
+      <td>-0.1369</td>
+      <td>-0.3129</td>
+      <td>0.4609</td>
+      <td>0.3758</td>
+      <td>0.1576</td>
+      <td>-0.0392</td>
+      <td>-0.0454</td>
+      <td>-0.0002</td>
+      <td>-0.0003</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Sodium</td>
+      <td>-0.6558</td>
+      <td>-0.4653</td>
+      <td>0.4098</td>
+      <td>-0.3039</td>
+      <td>0.2211</td>
+      <td>-0.1232</td>
+      <td>0.1636</td>
+      <td>-0.0478</td>
+      <td>0.0011</td>
+      <td>-0.0001</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Carbs</td>
+      <td>-0.2975</td>
+      <td>0.8554</td>
+      <td>0.1678</td>
+      <td>-0.2984</td>
+      <td>0.1889</td>
+      <td>-0.0685</td>
+      <td>-0.1463</td>
+      <td>-0.0248</td>
+      <td>0.0125</td>
+      <td>-0.0037</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Fiber</td>
+      <td>0.3102</td>
+      <td>-0.0958</td>
+      <td>0.7968</td>
+      <td>0.4274</td>
+      <td>0.0607</td>
+      <td>-0.2636</td>
+      <td>-0.0609</td>
+      <td>0.0099</td>
+      <td>-0.0007</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Sugar</td>
+      <td>-0.0568</td>
+      <td>0.9316</td>
+      <td>-0.1377</td>
+      <td>0.1446</td>
+      <td>0.2203</td>
+      <td>-0.0986</td>
+      <td>0.1665</td>
+      <td>0.0555</td>
+      <td>-0.0008</td>
+      <td>0.0007</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>cos2_var
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>COS²_var_F1</th>
+      <th>COS²_var_F2</th>
+      <th>COS²_var_F3</th>
+      <th>COS²_var_F4</th>
+      <th>COS²_var_F5</th>
+      <th>COS²_var_F6</th>
+      <th>COS²_var_F7</th>
+      <th>COS²_var_F8</th>
+      <th>COS²_var_F9</th>
+      <th>COS²_var_F10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Calories</td>
+      <td>0.8355</td>
+      <td>0.0984</td>
+      <td>0.0418</td>
+      <td>0.0172</td>
+      <td>0.0001</td>
+      <td>0.0010</td>
+      <td>0.0052</td>
+      <td>0.0001</td>
+      <td>0.0006</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Fat_Cal</td>
+      <td>0.8495</td>
+      <td>0.0115</td>
+      <td>0.0587</td>
+      <td>0.0136</td>
+      <td>0.0485</td>
+      <td>0.0171</td>
+      <td>0.0004</td>
+      <td>0.0002</td>
+      <td>0.0004</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Protein</td>
+      <td>0.3987</td>
+      <td>0.4809</td>
+      <td>0.0315</td>
+      <td>0.0190</td>
+      <td>0.0446</td>
+      <td>0.0115</td>
+      <td>0.0057</td>
+      <td>0.0080</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fat</td>
+      <td>0.8464</td>
+      <td>0.0081</td>
+      <td>0.0576</td>
+      <td>0.0145</td>
+      <td>0.0539</td>
+      <td>0.0175</td>
+      <td>0.0015</td>
+      <td>0.0003</td>
+      <td>0.0000</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sat_Fat</td>
+      <td>0.4780</td>
+      <td>0.0024</td>
+      <td>0.2727</td>
+      <td>0.0118</td>
+      <td>0.0584</td>
+      <td>0.1757</td>
+      <td>0.0001</td>
+      <td>0.0010</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Chol</td>
+      <td>0.5013</td>
+      <td>0.0188</td>
+      <td>0.0979</td>
+      <td>0.2124</td>
+      <td>0.1413</td>
+      <td>0.0248</td>
+      <td>0.0015</td>
+      <td>0.0021</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Sodium</td>
+      <td>0.4301</td>
+      <td>0.2165</td>
+      <td>0.1679</td>
+      <td>0.0923</td>
+      <td>0.0489</td>
+      <td>0.0152</td>
+      <td>0.0268</td>
+      <td>0.0023</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Carbs</td>
+      <td>0.0885</td>
+      <td>0.7317</td>
+      <td>0.0281</td>
+      <td>0.0891</td>
+      <td>0.0357</td>
+      <td>0.0047</td>
+      <td>0.0214</td>
+      <td>0.0006</td>
+      <td>0.0002</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Fiber</td>
+      <td>0.0962</td>
+      <td>0.0092</td>
+      <td>0.6349</td>
+      <td>0.1827</td>
+      <td>0.0037</td>
+      <td>0.0695</td>
+      <td>0.0037</td>
+      <td>0.0001</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Sugar</td>
+      <td>0.0032</td>
+      <td>0.8679</td>
+      <td>0.0190</td>
+      <td>0.0209</td>
+      <td>0.0485</td>
+      <td>0.0097</td>
+      <td>0.0277</td>
+      <td>0.0031</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>contribution_var
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>CTR_var_F1</th>
+      <th>CTR_var_F2</th>
+      <th>CTR_var_F3</th>
+      <th>CTR_var_F4</th>
+      <th>CTR_var_F5</th>
+      <th>CTR_var_F6</th>
+      <th>CTR_var_F7</th>
+      <th>CTR_var_F8</th>
+      <th>CTR_var_F9</th>
+      <th>...</th>
+      <th>CTR_var_F1_str</th>
+      <th>CTR_var_F2_str</th>
+      <th>CTR_var_F3_str</th>
+      <th>CTR_var_F4_str</th>
+      <th>CTR_var_F5_str</th>
+      <th>CTR_var_F6_str</th>
+      <th>CTR_var_F7_str</th>
+      <th>CTR_var_F8_str</th>
+      <th>CTR_var_F9_str</th>
+      <th>CTR_var_F10_str</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Calories</td>
+      <td>0.1845</td>
+      <td>0.0403</td>
+      <td>0.0296</td>
+      <td>0.0256</td>
+      <td>0.0003</td>
+      <td>0.0028</td>
+      <td>0.0554</td>
+      <td>0.0042</td>
+      <td>0.5145</td>
+      <td>...</td>
+      <td>18.45%</td>
+      <td>4.03%</td>
+      <td>2.96%</td>
+      <td>2.56%</td>
+      <td>0.03%</td>
+      <td>0.28%</td>
+      <td>5.54%</td>
+      <td>0.42%</td>
+      <td>51.45%</td>
+      <td>14.28%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Fat_Cal</td>
+      <td>0.1876</td>
+      <td>0.0047</td>
+      <td>0.0416</td>
+      <td>0.0202</td>
+      <td>0.1003</td>
+      <td>0.0494</td>
+      <td>0.0046</td>
+      <td>0.0087</td>
+      <td>0.3274</td>
+      <td>...</td>
+      <td>18.76%</td>
+      <td>0.47%</td>
+      <td>4.16%</td>
+      <td>2.02%</td>
+      <td>10.03%</td>
+      <td>4.94%</td>
+      <td>0.46%</td>
+      <td>0.87%</td>
+      <td>32.74%</td>
+      <td>25.54%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Protein</td>
+      <td>0.0881</td>
+      <td>0.1967</td>
+      <td>0.0223</td>
+      <td>0.0283</td>
+      <td>0.0922</td>
+      <td>0.0332</td>
+      <td>0.0605</td>
+      <td>0.4544</td>
+      <td>0.0198</td>
+      <td>...</td>
+      <td>8.81%</td>
+      <td>19.67%</td>
+      <td>2.23%</td>
+      <td>2.83%</td>
+      <td>9.22%</td>
+      <td>3.32%</td>
+      <td>6.05%</td>
+      <td>45.44%</td>
+      <td>1.98%</td>
+      <td>0.45%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fat</td>
+      <td>0.1869</td>
+      <td>0.0033</td>
+      <td>0.0409</td>
+      <td>0.0216</td>
+      <td>0.1115</td>
+      <td>0.0505</td>
+      <td>0.0155</td>
+      <td>0.0178</td>
+      <td>0.0103</td>
+      <td>...</td>
+      <td>18.69%</td>
+      <td>0.33%</td>
+      <td>4.09%</td>
+      <td>2.16%</td>
+      <td>11.15%</td>
+      <td>5.05%</td>
+      <td>1.55%</td>
+      <td>1.78%</td>
+      <td>1.03%</td>
+      <td>54.18%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sat_Fat</td>
+      <td>0.1056</td>
+      <td>0.0010</td>
+      <td>0.1934</td>
+      <td>0.0175</td>
+      <td>0.1207</td>
+      <td>0.5067</td>
+      <td>0.0006</td>
+      <td>0.0545</td>
+      <td>0.0000</td>
+      <td>...</td>
+      <td>10.56%</td>
+      <td>0.1%</td>
+      <td>19.34%</td>
+      <td>1.75%</td>
+      <td>12.07%</td>
+      <td>50.67%</td>
+      <td>0.06%</td>
+      <td>5.45%</td>
+      <td>0.0%</td>
+      <td>0.01%</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Chol</td>
+      <td>0.1107</td>
+      <td>0.0077</td>
+      <td>0.0694</td>
+      <td>0.3154</td>
+      <td>0.2921</td>
+      <td>0.0716</td>
+      <td>0.0164</td>
+      <td>0.1164</td>
+      <td>0.0000</td>
+      <td>...</td>
+      <td>11.07%</td>
+      <td>0.77%</td>
+      <td>6.94%</td>
+      <td>31.54%</td>
+      <td>29.21%</td>
+      <td>7.16%</td>
+      <td>1.64%</td>
+      <td>11.64%</td>
+      <td>0.0%</td>
+      <td>0.03%</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Sodium</td>
+      <td>0.0950</td>
+      <td>0.0885</td>
+      <td>0.1191</td>
+      <td>0.1371</td>
+      <td>0.1011</td>
+      <td>0.0438</td>
+      <td>0.2849</td>
+      <td>0.1294</td>
+      <td>0.0010</td>
+      <td>...</td>
+      <td>9.5%</td>
+      <td>8.85%</td>
+      <td>11.91%</td>
+      <td>13.71%</td>
+      <td>10.11%</td>
+      <td>4.38%</td>
+      <td>28.49%</td>
+      <td>12.94%</td>
+      <td>0.1%</td>
+      <td>0.01%</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Carbs</td>
+      <td>0.0196</td>
+      <td>0.2992</td>
+      <td>0.0200</td>
+      <td>0.1322</td>
+      <td>0.0738</td>
+      <td>0.0135</td>
+      <td>0.2278</td>
+      <td>0.0347</td>
+      <td>0.1260</td>
+      <td>...</td>
+      <td>1.96%</td>
+      <td>29.92%</td>
+      <td>2.0%</td>
+      <td>13.22%</td>
+      <td>7.38%</td>
+      <td>1.35%</td>
+      <td>22.78%</td>
+      <td>3.47%</td>
+      <td>12.6%</td>
+      <td>5.33%</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Fiber</td>
+      <td>0.0213</td>
+      <td>0.0038</td>
+      <td>0.4502</td>
+      <td>0.2712</td>
+      <td>0.0076</td>
+      <td>0.2004</td>
+      <td>0.0395</td>
+      <td>0.0055</td>
+      <td>0.0004</td>
+      <td>...</td>
+      <td>2.13%</td>
+      <td>0.38%</td>
+      <td>45.02%</td>
+      <td>27.12%</td>
+      <td>0.76%</td>
+      <td>20.04%</td>
+      <td>3.95%</td>
+      <td>0.55%</td>
+      <td>0.04%</td>
+      <td>0.0%</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Sugar</td>
+      <td>0.0007</td>
+      <td>0.3549</td>
+      <td>0.0134</td>
+      <td>0.0310</td>
+      <td>0.1003</td>
+      <td>0.0280</td>
+      <td>0.2949</td>
+      <td>0.1744</td>
+      <td>0.0005</td>
+      <td>...</td>
+      <td>0.07%</td>
+      <td>35.49%</td>
+      <td>1.34%</td>
+      <td>3.1%</td>
+      <td>10.03%</td>
+      <td>2.8%</td>
+      <td>29.49%</td>
+      <td>17.44%</td>
+      <td>0.05%</td>
+      <td>0.17%</td>
+    </tr>
+  </tbody>
+</table>
+<p>10 rows × 21 columns</p>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>cor_par_facteur_VarQttiveIllus
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>COR_VQI_F1</th>
+      <th>COR_VQI_F2</th>
+      <th>COR_VQI_F3</th>
+      <th>COR_VQI_F4</th>
+      <th>COR_VQI_F5</th>
+      <th>COR_VQI_F6</th>
+      <th>COR_VQI_F7</th>
+      <th>COR_VQI_F8</th>
+      <th>COR_VQI_F9</th>
+      <th>COR_VQI_F10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Serving_size</td>
+      <td>-0.0167</td>
+      <td>-0.5233</td>
+      <td>-0.2453</td>
+      <td>0.0875</td>
+      <td>0.0001</td>
+      <td>-0.2867</td>
+      <td>0.4634</td>
+      <td>0.1558</td>
+      <td>-0.1013</td>
+      <td>-0.3426</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>resultats_tests
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>[1, 1, 1, 1, 1]</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>centroides_1_2
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>[[1.6738383090522084, -0.6974326287717538],
+ [1.6854089566065358, -0.7022537319193899]]</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child" style="margin-top: 1rem;">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>centroides_3_4
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>[[-0.3117649032794226, 0.1299020430330927],
+ [0.10603477477986903, -0.044181156158278556]]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Cas particulier de la clé select_obs</span>
+<span class="c1">### resultat_acp[&quot;select_obs&quot;] renvoie, pour chaque observation, un tuple composé de 2 df:</span>
+<span class="c1">###   - df données initiales</span>
+<span class="c1">###   - df données calculées (coordonnées factorielles, cos², contribution aux axes)</span>
+
+<span class="k">for</span> <span class="n">obs</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Individu &quot;</span><span class="o">+</span><span class="n">obs</span>
+    <span class="n">all_data_obs</span> <span class="o">=</span> <span class="n">resultat_acp</span><span class="p">[</span><span class="s2">&quot;select_obs&quot;</span><span class="p">][</span><span class="n">obs</span><span class="p">]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data initiales&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">all_data_obs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data calculées&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">all_data_obs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>----------------------------
+Individu BK__Double_Stacker 
+----------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>BK__Double_Stacker</th>
+      <td>3.2400</td>
+      <td>1.8500</td>
+      <td>0.1700</td>
+      <td>0.2100</td>
+      <td>0.0900</td>
+      <td>0.6400</td>
+      <td>6.0100</td>
+      <td>0.1700</td>
+      <td>0.0100</td>
+      <td>0.0400</td>
+      <td>173</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-3.1275</td>
+      <td>0.7685</td>
+      <td>12.71% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-1.0466</td>
+      <td>0.0861</td>
+      <td>2.63% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-1.2105</td>
+      <td>0.1151</td>
+      <td>6.11% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>0.4395</td>
+      <td>0.0152</td>
+      <td>1.69% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>-0.4025</td>
+      <td>0.0127</td>
+      <td>1.97% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.1397</td>
+      <td>0.0015</td>
+      <td>0.33% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.1040</td>
+      <td>0.0008</td>
+      <td>0.68% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.0001</td>
+      <td>0.0000</td>
+      <td>0.0% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0137</td>
+      <td>0.0000</td>
+      <td>0.89% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0089</td>
+      <td>0.0000</td>
+      <td>1.86% (10e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+-------------------------------
+Individu BK_CHICKENFRIES(12pc) 
+-------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>BK_CHICKENFRIES(12pc)</th>
+      <td>2.9400</td>
+      <td>1.5300</td>
+      <td>0.1600</td>
+      <td>0.1700</td>
+      <td>0.0300</td>
+      <td>0.3200</td>
+      <td>9.5900</td>
+      <td>0.1900</td>
+      <td>0.0200</td>
+      <td>0.0100</td>
+      <td>170</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-1.3666</td>
+      <td>0.1832</td>
+      <td>2.43% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-1.8330</td>
+      <td>0.3296</td>
+      <td>8.08% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>1.8948</td>
+      <td>0.3522</td>
+      <td>14.98% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-0.6543</td>
+      <td>0.0420</td>
+      <td>3.74% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.7117</td>
+      <td>0.0497</td>
+      <td>6.16% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.1339</td>
+      <td>0.0018</td>
+      <td>0.3% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.6427</td>
+      <td>0.0405</td>
+      <td>25.86% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.1021</td>
+      <td>0.0010</td>
+      <td>3.47% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.0247</td>
+      <td>0.0001</td>
+      <td>2.9% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0104</td>
+      <td>0.0000</td>
+      <td>2.53% (7e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+---------------------
+Individu Buck_Double 
+---------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Buck_Double</th>
+      <td>2.5900</td>
+      <td>1.2700</td>
+      <td>0.1500</td>
+      <td>0.1400</td>
+      <td>0.0600</td>
+      <td>0.5400</td>
+      <td>4.6800</td>
+      <td>0.1800</td>
+      <td>0.0100</td>
+      <td>0.0400</td>
+      <td>158</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-0.9714</td>
+      <td>0.2571</td>
+      <td>1.23% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-0.9255</td>
+      <td>0.2334</td>
+      <td>2.06% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-1.3342</td>
+      <td>0.4851</td>
+      <td>7.43% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>0.1598</td>
+      <td>0.0070</td>
+      <td>0.22% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.1569</td>
+      <td>0.0067</td>
+      <td>0.3% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>0.0950</td>
+      <td>0.0025</td>
+      <td>0.15% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>-0.1691</td>
+      <td>0.0078</td>
+      <td>1.79% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.0030</td>
+      <td>0.0000</td>
+      <td>0.0% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0208</td>
+      <td>0.0001</td>
+      <td>2.05% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0344</td>
+      <td>0.0003</td>
+      <td>27.82% (1e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+---------------------------------
+Individu CHICKENTENDERS_Sandwich 
+---------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CHICKENTENDERS_Sandwich</th>
+      <td>3.1000</td>
+      <td>1.7600</td>
+      <td>0.0800</td>
+      <td>0.2000</td>
+      <td>0.0300</td>
+      <td>0.2500</td>
+      <td>4.3000</td>
+      <td>0.2500</td>
+      <td>0.0100</td>
+      <td>0.0300</td>
+      <td>142</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-0.7845</td>
+      <td>0.1459</td>
+      <td>0.8% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>0.3468</td>
+      <td>0.0285</td>
+      <td>0.29% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>0.4545</td>
+      <td>0.0490</td>
+      <td>0.86% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-0.5039</td>
+      <td>0.0602</td>
+      <td>2.22% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>-1.0555</td>
+      <td>0.2640</td>
+      <td>13.55% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>1.3786</td>
+      <td>0.4505</td>
+      <td>32.24% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>-0.0793</td>
+      <td>0.0015</td>
+      <td>0.39% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.0424</td>
+      <td>0.0004</td>
+      <td>0.6% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.0070</td>
+      <td>0.0000</td>
+      <td>0.23% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0176</td>
+      <td>0.0001</td>
+      <td>7.25% (4e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+------------------------------
+Individu ChocolateFudgeSundae 
+------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ChocolateFudgeSundae</th>
+      <td>1.6800</td>
+      <td>0.4000</td>
+      <td>0.0300</td>
+      <td>0.0500</td>
+      <td>0.0400</td>
+      <td>0.1200</td>
+      <td>1.3300</td>
+      <td>0.3100</td>
+      <td>0.0100</td>
+      <td>0.2600</td>
+      <td>173</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>2.8711</td>
+      <td>0.4687</td>
+      <td>10.71% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>2.4620</td>
+      <td>0.3447</td>
+      <td>14.58% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-1.6100</td>
+      <td>0.1474</td>
+      <td>10.81% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-0.4032</td>
+      <td>0.0092</td>
+      <td>1.42% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.3753</td>
+      <td>0.0080</td>
+      <td>1.71% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.2359</td>
+      <td>0.0032</td>
+      <td>0.94% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.5164</td>
+      <td>0.0152</td>
+      <td>16.69% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.2518</td>
+      <td>0.0036</td>
+      <td>21.08% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.0064</td>
+      <td>0.0000</td>
+      <td>0.19% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0054</td>
+      <td>0.0000</td>
+      <td>0.69% (13e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+---------------------
+Individu DanishApple 
+---------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DanishApple</th>
+      <td>3.6700</td>
+      <td>1.5600</td>
+      <td>0.0500</td>
+      <td>0.1700</td>
+      <td>0.0800</td>
+      <td>0.0400</td>
+      <td>4.0600</td>
+      <td>0.4800</td>
+      <td>0.0100</td>
+      <td>0.2300</td>
+      <td>128</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-1.1749</td>
+      <td>0.0812</td>
+      <td>1.79% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>3.4865</td>
+      <td>0.7155</td>
+      <td>29.24% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-0.0173</td>
+      <td>0.0000</td>
+      <td>0.0% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-1.2038</td>
+      <td>0.0853</td>
+      <td>12.66% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>-0.9876</td>
+      <td>0.0574</td>
+      <td>11.86% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-1.0056</td>
+      <td>0.0595</td>
+      <td>17.15% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>-0.0391</td>
+      <td>0.0001</td>
+      <td>0.1% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.1264</td>
+      <td>0.0009</td>
+      <td>5.31% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0162</td>
+      <td>0.0000</td>
+      <td>1.25% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0033</td>
+      <td>0.0000</td>
+      <td>0.26% (15e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+-----------------------------
+Individu Double_Cheeseburger 
+-----------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Double_Cheeseburger</th>
+      <td>2.6300</td>
+      <td>1.3400</td>
+      <td>0.1500</td>
+      <td>0.1500</td>
+      <td>0.0700</td>
+      <td>0.5600</td>
+      <td>5.6100</td>
+      <td>0.1700</td>
+      <td>0.0100</td>
+      <td>0.0400</td>
+      <td>171</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-1.4214</td>
+      <td>0.4055</td>
+      <td>2.63% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-1.0827</td>
+      <td>0.2353</td>
+      <td>2.82% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-1.3058</td>
+      <td>0.3423</td>
+      <td>7.11% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>0.1022</td>
+      <td>0.0021</td>
+      <td>0.09% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.0834</td>
+      <td>0.0014</td>
+      <td>0.08% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.0635</td>
+      <td>0.0008</td>
+      <td>0.07% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.1183</td>
+      <td>0.0028</td>
+      <td>0.88% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.2198</td>
+      <td>0.0097</td>
+      <td>16.06% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.0043</td>
+      <td>0.0000</td>
+      <td>0.09% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0279</td>
+      <td>0.0002</td>
+      <td>18.27% (3e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+--------------------------
+Individu Double_Hamburger 
+--------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Double_Hamburger</th>
+      <td>2.4700</td>
+      <td>1.1000</td>
+      <td>0.1500</td>
+      <td>0.1200</td>
+      <td>0.0500</td>
+      <td>0.4800</td>
+      <td>3.5600</td>
+      <td>0.1900</td>
+      <td>0.0100</td>
+      <td>0.0400</td>
+      <td>146</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-0.2617</td>
+      <td>0.0238</td>
+      <td>0.09% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-0.7160</td>
+      <td>0.1780</td>
+      <td>1.23% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-1.3675</td>
+      <td>0.6492</td>
+      <td>7.8% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>0.1023</td>
+      <td>0.0036</td>
+      <td>0.09% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.2089</td>
+      <td>0.0151</td>
+      <td>0.53% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>0.2123</td>
+      <td>0.0156</td>
+      <td>0.76% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>-0.4979</td>
+      <td>0.0860</td>
+      <td>15.52% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.2841</td>
+      <td>0.0280</td>
+      <td>26.84% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0403</td>
+      <td>0.0006</td>
+      <td>7.72% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0032</td>
+      <td>0.0000</td>
+      <td>0.24% (16e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+-----------------------------------
+Individu Double_Bacon_Cheeseburger 
+-----------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Double_Bacon_Cheeseburger</th>
+      <td>2.8200</td>
+      <td>1.4900</td>
+      <td>0.1700</td>
+      <td>0.1700</td>
+      <td>0.0800</td>
+      <td>0.5800</td>
+      <td>6.3500</td>
+      <td>0.1600</td>
+      <td>0.0100</td>
+      <td>0.0400</td>
+      <td>181</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-2.1078</td>
+      <td>0.5537</td>
+      <td>5.77% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-1.3087</td>
+      <td>0.2134</td>
+      <td>4.12% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-1.3095</td>
+      <td>0.2137</td>
+      <td>7.15% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>0.0595</td>
+      <td>0.0004</td>
+      <td>0.03% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.0837</td>
+      <td>0.0009</td>
+      <td>0.09% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.2525</td>
+      <td>0.0079</td>
+      <td>1.08% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.2635</td>
+      <td>0.0087</td>
+      <td>4.35% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.0979</td>
+      <td>0.0012</td>
+      <td>3.19% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.0132</td>
+      <td>0.0000</td>
+      <td>0.83% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0140</td>
+      <td>0.0000</td>
+      <td>4.63% (6e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+--------------------------------
+Individu GardenSalad(nochicken) 
+--------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GardenSalad(nochicken)</th>
+      <td>0.4300</td>
+      <td>0.2200</td>
+      <td>0.0200</td>
+      <td>0.0200</td>
+      <td>0.0200</td>
+      <td>0.0600</td>
+      <td>0.6200</td>
+      <td>0.0400</td>
+      <td>0.0200</td>
+      <td>0.0100</td>
+      <td>162</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>5.1642</td>
+      <td>0.9184</td>
+      <td>34.65% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-0.8198</td>
+      <td>0.0231</td>
+      <td>1.62% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-0.2854</td>
+      <td>0.0028</td>
+      <td>0.34% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>1.0558</td>
+      <td>0.0384</td>
+      <td>9.74% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>-0.6561</td>
+      <td>0.0148</td>
+      <td>5.24% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>0.2270</td>
+      <td>0.0018</td>
+      <td>0.87% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.0461</td>
+      <td>0.0001</td>
+      <td>0.13% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.1255</td>
+      <td>0.0005</td>
+      <td>5.24% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.0261</td>
+      <td>0.0000</td>
+      <td>3.24% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0080</td>
+      <td>0.0000</td>
+      <td>1.5% (11e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+---------------------------------
+Individu KRAFT_MacaroniandCheese 
+---------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>KRAFT_MacaroniandCheese</th>
+      <td>1.4200</td>
+      <td>0.4000</td>
+      <td>0.0600</td>
+      <td>0.0400</td>
+      <td>0.0100</td>
+      <td>0.0900</td>
+      <td>3.0100</td>
+      <td>0.1900</td>
+      <td>0.0100</td>
+      <td>0.0400</td>
+      <td>113</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>3.3203</td>
+      <td>0.8965</td>
+      <td>14.32% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-0.1485</td>
+      <td>0.0018</td>
+      <td>0.05% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>-0.4717</td>
+      <td>0.0181</td>
+      <td>0.93% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-0.7834</td>
+      <td>0.0499</td>
+      <td>5.36% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.1774</td>
+      <td>0.0026</td>
+      <td>0.38% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>0.5999</td>
+      <td>0.0293</td>
+      <td>6.1% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.0623</td>
+      <td>0.0003</td>
+      <td>0.24% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.1405</td>
+      <td>0.0016</td>
+      <td>6.57% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0016</td>
+      <td>0.0000</td>
+      <td>0.01% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0077</td>
+      <td>0.0000</td>
+      <td>1.39% (12e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+-------------------------
+Individu MuffinBlueberry 
+-------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>MuffinBlueberry</th>
+      <td>3.6300</td>
+      <td>1.8600</td>
+      <td>0.0400</td>
+      <td>0.2000</td>
+      <td>0.0400</td>
+      <td>0.7500</td>
+      <td>3.5400</td>
+      <td>0.4200</td>
+      <td>0.0200</td>
+      <td>0.3100</td>
+      <td>113</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-1.8115</td>
+      <td>0.1550</td>
+      <td>4.26% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>3.4469</td>
+      <td>0.5614</td>
+      <td>28.58% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>0.8257</td>
+      <td>0.0322</td>
+      <td>2.84% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>1.8648</td>
+      <td>0.1643</td>
+      <td>30.37% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>1.2006</td>
+      <td>0.0681</td>
+      <td>17.53% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>0.6276</td>
+      <td>0.0186</td>
+      <td>6.68% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.0361</td>
+      <td>0.0001</td>
+      <td>0.08% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.0813</td>
+      <td>0.0003</td>
+      <td>2.2% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0054</td>
+      <td>0.0000</td>
+      <td>0.14% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0016</td>
+      <td>0.0000</td>
+      <td>0.06% (17e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+------------------------------------------
+Individu Original_Chicken_Sandwichw/oMayo 
+------------------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Original_Chicken_Sandwichw/oMayo</th>
+      <td>2.2100</td>
+      <td>0.7400</td>
+      <td>0.1300</td>
+      <td>0.0800</td>
+      <td>0.0200</td>
+      <td>0.2400</td>
+      <td>6.3700</td>
+      <td>0.2400</td>
+      <td>0.0200</td>
+      <td>0.0200</td>
+      <td>190</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>1.2195</td>
+      <td>0.2938</td>
+      <td>1.93% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-0.9673</td>
+      <td>0.1849</td>
+      <td>2.25% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>0.8821</td>
+      <td>0.1537</td>
+      <td>3.25% (11e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-0.8138</td>
+      <td>0.1308</td>
+      <td>5.78% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>1.0803</td>
+      <td>0.2306</td>
+      <td>14.2% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.1029</td>
+      <td>0.0021</td>
+      <td>0.18% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>-0.1297</td>
+      <td>0.0033</td>
+      <td>1.05% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.0417</td>
+      <td>0.0003</td>
+      <td>0.58% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0245</td>
+      <td>0.0001</td>
+      <td>2.85% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0308</td>
+      <td>0.0002</td>
+      <td>22.31% (2e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+----------------------------
+Individu Rodeo_Cheeseburger 
+----------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Rodeo_Cheeseburger</th>
+      <td>2.7300</td>
+      <td>1.2500</td>
+      <td>0.1200</td>
+      <td>0.1300</td>
+      <td>0.0500</td>
+      <td>0.3500</td>
+      <td>4.6900</td>
+      <td>0.2900</td>
+      <td>0.0200</td>
+      <td>0.0700</td>
+      <td>128</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-0.3609</td>
+      <td>0.1356</td>
+      <td>0.17% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>0.1098</td>
+      <td>0.0126</td>
+      <td>0.03% (15e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>0.2119</td>
+      <td>0.0468</td>
+      <td>0.19% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>0.0878</td>
+      <td>0.0080</td>
+      <td>0.07% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.2258</td>
+      <td>0.0531</td>
+      <td>0.62% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.6122</td>
+      <td>0.3903</td>
+      <td>6.36% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>-0.5672</td>
+      <td>0.3350</td>
+      <td>20.14% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.0699</td>
+      <td>0.0051</td>
+      <td>1.63% (13e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.1138</td>
+      <td>0.0135</td>
+      <td>61.59% (1e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0033</td>
+      <td>0.0000</td>
+      <td>0.26% (14e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+------------------------------------
+Individu SpicyCHICK_NCRISP_Sandwich 
+------------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>SpicyCHICK_NCRISP_Sandwich</th>
+      <td>3.3800</td>
+      <td>1.9900</td>
+      <td>0.1000</td>
+      <td>0.2200</td>
+      <td>0.0400</td>
+      <td>0.2200</td>
+      <td>5.9600</td>
+      <td>0.2500</td>
+      <td>0.0100</td>
+      <td>0.0300</td>
+      <td>136</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>-1.4813</td>
+      <td>0.3375</td>
+      <td>2.85% (7e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>0.0962</td>
+      <td>0.0014</td>
+      <td>0.02% (17e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>1.6639</td>
+      <td>0.4258</td>
+      <td>11.55% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-0.2130</td>
+      <td>0.0070</td>
+      <td>0.4% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>-1.0292</td>
+      <td>0.1629</td>
+      <td>12.88% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>0.6416</td>
+      <td>0.0633</td>
+      <td>6.98% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.0681</td>
+      <td>0.0007</td>
+      <td>0.29% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.0903</td>
+      <td>0.0013</td>
+      <td>2.71% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>0.0082</td>
+      <td>0.0000</td>
+      <td>0.32% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0097</td>
+      <td>0.0000</td>
+      <td>2.2% (8e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+-------------------------------------------
+Individu SpicyCHICK_NCRISP_Sandwichw/oMayo 
+-------------------------------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>SpicyCHICK_NCRISP_Sandwichw/oMayo</th>
+      <td>2.6300</td>
+      <td>0.9600</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>0.0200</td>
+      <td>0.1800</td>
+      <td>5.8800</td>
+      <td>0.3100</td>
+      <td>0.0200</td>
+      <td>0.0400</td>
+      <td>114</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>0.8444</td>
+      <td>0.1834</td>
+      <td>0.93% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-0.1092</td>
+      <td>0.0031</td>
+      <td>0.03% (16e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>1.3647</td>
+      <td>0.4791</td>
+      <td>7.77% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>-0.8195</td>
+      <td>0.1728</td>
+      <td>5.87% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>0.6361</td>
+      <td>0.1041</td>
+      <td>4.92% (9e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-0.1691</td>
+      <td>0.0074</td>
+      <td>0.48% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>-0.4308</td>
+      <td>0.0477</td>
+      <td>11.62% (5e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>-0.0877</td>
+      <td>0.0020</td>
+      <td>2.56% (10e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0392</td>
+      <td>0.0004</td>
+      <td>7.3% (4e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>0.0171</td>
+      <td>0.0001</td>
+      <td>6.83% (5e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+------------------
+Individu Tacos(2) 
+------------------
+
+Data initiales
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Calories</th>
+      <th>Fat_Cal</th>
+      <th>Protein</th>
+      <th>Fat</th>
+      <th>Sat_Fat</th>
+      <th>Chol</th>
+      <th>Sodium</th>
+      <th>Carbs</th>
+      <th>Fiber</th>
+      <th>Sugar</th>
+      <th>Serving_size</th>
+    </tr>
+    <tr>
+      <th>ITEM</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Tacos(2)</th>
+      <td>1.9000</td>
+      <td>1.1500</td>
+      <td>0.0800</td>
+      <td>0.1300</td>
+      <td>0.0500</td>
+      <td>0.1700</td>
+      <td>4.3100</td>
+      <td>0.1000</td>
+      <td>0.0300</td>
+      <td>0.0200</td>
+      <td>174</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Data calculées
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coord. fact.</th>
+      <th>COS²</th>
+      <th>Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>F1</th>
+      <td>1.4500</td>
+      <td>0.2142</td>
+      <td>2.73% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <td>-0.9910</td>
+      <td>0.1001</td>
+      <td>2.36% (8e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F3</th>
+      <td>1.6146</td>
+      <td>0.2656</td>
+      <td>10.88% (3e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F4</th>
+      <td>1.5231</td>
+      <td>0.2364</td>
+      <td>20.26% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F5</th>
+      <td>-0.8092</td>
+      <td>0.0667</td>
+      <td>7.97% (6e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F6</th>
+      <td>-1.0666</td>
+      <td>0.1159</td>
+      <td>19.3% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F7</th>
+      <td>0.0556</td>
+      <td>0.0003</td>
+      <td>0.19% (14e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F8</th>
+      <td>0.0771</td>
+      <td>0.0006</td>
+      <td>1.98% (12e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F9</th>
+      <td>-0.0421</td>
+      <td>0.0002</td>
+      <td>8.41% (2e contributeur)</td>
+    </tr>
+    <tr>
+      <th>F10</th>
+      <td>-0.0090</td>
+      <td>0.0000</td>
+      <td>1.91% (9e contributeur)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+</pre>
+</div>
 </div>
 
 </div>
