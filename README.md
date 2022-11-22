@@ -82,5 +82,5 @@ RDV [ICI](https://FredGainza.github.io/generateACP/)
 ## Exemple
 
 * Notebook disponible au format [html](https://kopadata.fr/data/analyse_acp_exemple.html)
-* Notebook exécuté *analyse_acp_exemple.ipynb* présent dans le dossier [/docs/](https://github.com/FredGainza/generateACP/blob/6b7438df2f6feb4d7ad824f08088e591c293327f/docs/analyse_acp_exemple.ipynb)
+* Notebook exécuté *analyse_acp_exemple.ipynb* présent dans le dossier [/docs/](https://github.com/FredGainza/generateACP/tree/main/docs)
 * Notebook dispo sur [binder](https://mybinder.org/v2/gh/FredGainza/generateACP.git/HEAD) (exécutez le notebook *binder_exemple_module_acp.ipynb* présent dans le dossier /docs/)
