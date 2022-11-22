@@ -1,123 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        <link rel="canonical" href="https://github.com/FredGainza/generateACP/">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>generateACP</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
-        <link href="assets/_mkdocstrings.css" rel="stylesheet">
-        <link href="extra.css" rel="stylesheet">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="None">
 
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href=".">generateACP</a>
+    <link rel="canonical" href="https://github.com/FredGainza/generateACP/">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>generateACP</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+    <link href="assets/_mkdocstrings.css" rel="stylesheet">
+    <link href="extra.css" rel="stylesheet">
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
+    <script src="js/jquery-1.10.2.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
 
-                    <ul class="nav navbar-nav ml-auto">
-                    </ul>
-                </div>
+<body class="homepage">
+    <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href=".">generateACP</a>
+
+            <!-- Expanded navigation -->
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav ml-auto">
+                </ul>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table des matières">
-            <span class="fa fa-angle-down"></span>
-        </button>
     </div>
 
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#generateacp" class="nav-link">generateACP</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#1-presentation" class="nav-link">1. Présentation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#2-installation" class="nav-link">2. Installation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#3-detail-de-la-fonction" class="nav-link">3. Détail de la fonction</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#4-exemple" class="nav-link">4. Exemple</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#5-reference" class="nav-link">5. Reference</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#6-about" class="nav-link">6. About</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                            data-target="#toc-collapse" title="Table des matières">
+                            <span class="fa fa-angle-down"></span>
+                        </button>
+                    </div>
 
-<h1 id="generateacp">generateACP</h1>
-<h2 id="1-presentation">1. Présentation</h2>
-<p>Réalisation d'une ACP à partir d'un fichier .csv ou .xlsx de données.</p>
-<p><img alt="GitHub" src="https://kopadata.fr/imgs/logo-github_ok.png" />   <a href="https://github.com/FredGainza/generateACP">Dépôt GitHub</a></p>
-<p>Structure de l'analyse réalisée :</p>
-<h4 id="information-sur-les-donnees">Information sur les données</h4>
-<pre><code>    * données initiales
+                    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+                        <ul class="nav flex-column">
+
+                            <li class="nav-item" data-level="1"><a href="#generateacp" class="nav-link">generateACP</a>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item" data-level="2"><a href="#1-presentation" class="nav-link">1.
+                                            Présentation</a>
+                                        <ul class="nav flex-column">
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item" data-level="2"><a href="#2-installation" class="nav-link">2.
+                                            Installation</a>
+                                        <ul class="nav flex-column">
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item" data-level="2"><a href="#3-detail-de-la-fonction"
+                                            class="nav-link">3. Détail de la fonction</a>
+                                        <ul class="nav flex-column">
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item" data-level="2"><a href="#4-exemple" class="nav-link">4.
+                                            Exemple</a>
+                                        <ul class="nav flex-column">
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item" data-level="2"><a href="#5-reference" class="nav-link">5.
+                                            Reference</a>
+                                        <ul class="nav flex-column">
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item" data-level="2"><a href="#6-about" class="nav-link">6. About</a>
+                                        <ul class="nav flex-column">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9" role="main">
+
+                <h1 id="generateacp">generateACP</h1>
+                <h2 id="1-presentation">1. Présentation</h2>
+                <p>Réalisation d'une ACP à partir d'un fichier .csv ou .xlsx de données.</p>
+                <p><img alt="GitHub" src="https://kopadata.fr/imgs/logo-github_ok.png" /> <a
+                        href="https://github.com/FredGainza/generateACP">Dépôt GitHub</a></p>
+                <p>Structure de l'analyse réalisée :</p>
+                <h4 id="information-sur-les-donnees">Information sur les données</h4>
+                <pre><code>    * données initiales
     * données centrées réduites
 </code></pre>
-<h4 id="recherche-du-nombre-de-facteurs-a-retenir">Recherche du nombre de facteurs à retenir</h4>
-<pre><code>    * graphique eboulis des valeurs propres
+                <h4 id="recherche-du-nombre-de-facteurs-a-retenir">Recherche du nombre de facteurs à retenir</h4>
+                <pre><code>    * graphique eboulis des valeurs propres
     * calcul de la proportion de variance expliquée
     * test des bâtons brisés
 </code></pre>
-<h4 id="representation-des-individus">Représentation des individus</h4>
-<pre><code>    * coordonnées factorielles des individus
+                <h4 id="representation-des-individus">Représentation des individus</h4>
+                <pre><code>    * coordonnées factorielles des individus
     * qualité de la représentation des individus (cos² de chaque individu par axe)
     * contribution des individus aux axes
 </code></pre>
-<h4 id="representation-des-variables">Représentation des variables</h4>
-<pre><code>    * les vecteurs propres
+                <h4 id="representation-des-variables">Représentation des variables</h4>
+                <pre><code>    * les vecteurs propres
     * corrélations par facteur
     * qualité de la représentation des variables (cos² de chaque variable par axe)
     * contribution des variables aux axes
 </code></pre>
-<h4 id="traitement-des-variables-supplementaires">Traitement des variables supplémentaires</h4>
-<pre><code>    * variables illustratives quantitatives
+                <h4 id="traitement-des-variables-supplementaires">Traitement des variables supplémentaires</h4>
+                <pre><code>    * variables illustratives quantitatives
     * variables illustratives qualitatives
 </code></pre>
-<h4 id="representation-graphique-pour-chaque-plan-factoriel">Représentation graphique (pour chaque plan factoriel)</h4>
-<pre><code>    * Projection des individus
+                <h4 id="representation-graphique-pour-chaque-plan-factoriel">Représentation graphique (pour chaque plan
+                    factoriel)</h4>
+                <pre><code>    * Projection des individus
     * Cercle des corrélations
 </code></pre>
-<h2 id="2-installation">2. Installation</h2>
-<h3 id="exemple-avec-anaconda">Exemple avec Anaconda</h3>
-<pre><code class="language-bash">    ### Créer un dossier pour le projet
+                <h2 id="2-installation">2. Installation</h2>
+                <h3 id="exemple-avec-anaconda">Exemple avec Anaconda</h3>
+                <pre><code class="language-bash">    ### Créer un dossier pour le projet
     $ cd /vers/dossier/testACP
 
     ### Créer un nouvel environnement
@@ -128,503 +140,655 @@
     ### Installer le module generateAcp
     $ pip install git+https://github.com/FredGainza/generateACP.git
 </code></pre>
-<p>Pour utiliser le module dans un notebook, il faut importer la fonction <strong>acp_global()</strong> :</p>
-<pre><code class="language-python">    from generateACP import acp_global
+                <p>Pour utiliser le module dans un notebook, il faut importer la fonction <strong>acp_global()</strong>
+                    :</p>
+                <pre><code class="language-python">    from generateACP import acp_global
 </code></pre>
-<p>Les modules suivants seront automatiquement installés :</p>
-<ul>
-<li>pandas</li>
-<li>numpy</li>
-<li>scikit-learn</li>
-<li>matplotlib</li>
-<li>jupyter</li>
-<li>adjustText</li>
-<li>pdfservices-sdk</li>
-<li>openpyxl</li>
-</ul>
-<h2 id="3-detail-de-la-fonction">3. Détail de la fonction</h2>
-<hr />
-<h3 id="preambule">Préambule</h3>
-<hr />
-<p>le seul paramètre obligatoire de la fonction est le df des données.</p>
-<p>Veillez à le formater correctement :</p>
-<p>Pour les variables servant aux calculs de l'ACP (ne concerne pas les variables illustratives) :</p>
-<pre><code>- mettre en index la variable d'observation (variable qualitative générallement)
+                <p>Les modules suivants seront automatiquement installés :</p>
+                <ul>
+                    <li>pandas</li>
+                    <li>numpy</li>
+                    <li>scikit-learn</li>
+                    <li>matplotlib</li>
+                    <li>jupyter</li>
+                    <li>adjustText</li>
+                    <li>pdfservices-sdk</li>
+                    <li>openpyxl</li>
+                </ul>
+                <h2 id="3-detail-de-la-fonction">3. Détail de la fonction</h2>
+                <hr />
+                <h3 id="preambule">Préambule</h3>
+                <hr />
+                <p>Le seul paramètre obligatoire de la fonction est le df des données, à formater de la façon
+                    suivante&nbsp;:</p>
+                <p>Pour les variables servant aux calculs de l'ACP (ne concerne pas les variables illustratives)&nbsp;:
+                </p>
+                <pre><code>- mettre en index la variable d'observation (variable qualitative générallement)
 - les colonnes du df ne doivent contenir UNIQUEMENT DES VARIABLES QUANTITATIVES
 - les variables qualitatives doivent donc être transformées en variables quantitatives
 </code></pre>
-<p>Si votre jeu de données contient les variables explicatives et illustratives, vous devez créer plusieurs df (avec toujours la variable d'observation en index), soit :</p>
-<pre><code>- un df avec les variables quantitaives explicatives
+                <p>Si votre jeu de données contient les variables explicatives et illustratives, vous devez créer
+                    plusieurs df (avec toujours la variable d'observation en index), soit&nbsp;:</p>
+                <pre><code>- un df avec les variables quantitaives explicatives
 - un df avec les variables quantitatives illustratives
 - un df avec les variables qualitatives explicatives
 </code></pre>
-<p>Se référer à l'<a href="https://kopadata.fr/data/analyse_ACP_exemple.html" target="blank">exemple</a> pour plus de détails.
-<br></p>
-<hr />
-<h3 id="fonction-acp_global">Fonction acp_global</h3>
-<hr />
-
-
-<div class="doc doc-object doc-module">
-
-
-<a id="generateACP"></a>
-  <div class="doc doc-contents first">
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h5 id="generateACP.acp_global" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">acp_global</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">axis_ranks</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">group_special</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">varSupp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">varSuppQual</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labels_ind</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">graph_only</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">graph_only_acp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data_only</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">color_titles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">palette_color</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-</h5>
-
-
-  <div class="doc doc-contents ">
-  
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>df</code></td>
-          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>df initial structuré pour une ACP:</p>
-<ul>
-<li>en ligne: des individus / observations</li>
-<li>en colonne: les variables explicatives quantitatives </li>
-<li>en index: la variable des observations</li>
-</ul></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>axis_ranks</code></td>
-          <td>
-                <code>list</code>
-          </td>
-          <td><p>les dimensions du / des plan(s) factoriels à étudier</p>
-<ul>
-<li>vérifier que les degrés factortiels ne soient pas supérieurs aux nombres de variables</li>
-<li>
-<p>possible de lancer la fonction acp_global() pour connaitre le résultat des tests de recherche du nombre
-de facteurs à retenir (eboulis des valeurs propres avec proportion cumulée de la variance expliquée, test
-des bâtons brisés) en laissant la valeur des paramètres par défaut</p>
-<p>Exemple: en supposant que:</p>
-<ul>
-<li>df soit le nom du DataFrame des données initiales</li>
-<li>resultat_acp soit le nom donné au résultat de la fonction :<pre><code>resultat_acp = acp_globale(df)
+                <p>Se référer à l'exemple <a href="https://github.com/FredGainza/generateACP/tree/main/docs"
+                        target="_blank"><em>analyse_acp_exemple.ipynb</em></a> pour plus de détails.</p>
+                <br>
+                <br>
+                <hr />
+                <h3 id="fonction-acp_global">Fonction acp_global</h3>
+                <hr />
+                <div class="doc doc-object doc-module">
+                    <a id="generateACP"></a>
+                    <div class="doc doc-contents first">
+                        <div class="doc doc-children">
+                            <div class="doc doc-object doc-function">
+                                <h5 id="generateACP.acp_global" class="doc doc-heading">
+                                    <code class="highlight language-python"><span class="n">acp_global</span><span
+                                            class="p">(</span><span class="n">df</span><span class="p">,</span> <span
+                                            class="n">axis_ranks</span><span class="o">=</span><span
+                                            class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span
+                                            class="mi">1</span><span class="p">)],</span> <span
+                                            class="n">group</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">group_special</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">varSupp</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">varSuppQual</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">labels</span><span class="o">=</span><span
+                                            class="kc">True</span><span class="p">,</span> <span
+                                            class="n">labels_ind</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">legend_label</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">version_name</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">graph_only</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">graph_only_acp</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">data_only</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">color_titles</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">,</span> <span
+                                            class="n">palette_color</span><span class="o">=</span><span
+                                            class="kc">None</span><span class="p">)</span></code>
+                                </h5>
+                                <div class="doc doc-contents ">
+                                    <p><strong>Parameters:</strong></p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                                <th>Default</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>df</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>df initial structuré pour une ACP:</p>
+                                                    <ul>
+                                                        <li>en ligne: des individus / observations</li>
+                                                        <li>en colonne: les variables explicatives quantitatives </li>
+                                                        <li>en index: la variable des observations</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <em>required</em>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>axis_ranks</code></td>
+                                                <td>
+                                                    <code>list</code>
+                                                </td>
+                                                <td>
+                                                    <p>les dimensions du / des plan(s) factoriels à étudier</p>
+                                                    <ul>
+                                                        <li>vérifier que les degrés factortiels ne soient pas supérieurs
+                                                            aux nombres de variables</li>
+                                                        <li>
+                                                            <p>possible de lancer la fonction acp_global() pour
+                                                                connaitre le résultat des tests de recherche du nombre
+                                                                de facteurs à retenir (eboulis des valeurs propres avec
+                                                                proportion cumulée de la variance expliquée, test
+                                                                des bâtons brisés) en laissant la valeur des paramètres
+                                                                par défaut</p>
+                                                            <p>Exemple: en supposant que:</p>
+                                                            <ul>
+                                                                <li>df soit le nom du DataFrame des données initiales
+                                                                </li>
+                                                                <li>resultat_acp soit le nom donné au résultat de la
+                                                                    fonction :
+                                                                    <pre><code>resultat_acp = acp_globale(df)
 </code></pre>
-</li>
-</ul>
-</li>
-</ul></td>
-          <td>
-                <code>[(0, 1)]</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>group</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td><p>clustering</p>
-<ul>
-<li>valeur acceptée : nom de la colonne de groupe</li>
-<li>il faut donc que le df initial comporte cette colonne</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>group_special</code></td>
-          <td>
-                <code>list</code>
-          </td>
-          <td><p>liste d'individus constituant un groupe particulier (individus particuliers de la variable en index)</p>
-<ul>
-<li>valeur acceptée : liste d'individus</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>varSupp</code></td>
-          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>variables illustratives quantitatives</p>
-<ul>
-<li>
-<p>valeur acceptée : df avec</p>
-<ul>
-<li>même nb de lignes que le df initial (les mêmes individus)</li>
-<li>en colonnes les variables illustratives quantitatives</li>
-</ul>
-</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>varSuppQual</code></td>
-          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>variables illustratives qualitatives</p>
-<ul>
-<li>
-<p>valeur acceptée : df avec</p>
-<ul>
-<li>même nb de lignes que le df initial (les mêmes individus)</li>
-<li>en colonnes les variables illustratives qualitatives</li>
-</ul>
-</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>labels</code></td>
-          <td>
-                <code>boolean</code>
-          </td>
-          <td><p>affichage des valeurs de la variable des observations (variable en index)</p>
-<ul>
-<li>valeur acceptée : True or None</li>
-<li>NB : si labels = True, alors labels_ind = False  (ne choisir que 1 de ces 2 possibilités)</li>
-</ul></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>labels_ind</code></td>
-          <td>
-                <code>boolean</code>
-          </td>
-          <td><p>affichage de l'indice des valeurs de la variable des observations (variable en index)</p>
-<ul>
-<li>valeur acceptée : True or None</li>
-<li>NB : si labels_ind = True, alors labels = False  (ne choisir que 1 de ces 2 possibilités)</li>
-<li>intérêt de cette option: facilite la lecture du graphique "Projection des individus", notamment si le
-nombre d'oservations (nombre de lignes) est important</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>legend_label</code></td>
-          <td>
-                <code>boolean</code>
-          </td>
-          <td><p>affichage des correspondances indice et valeur de la variable d'observation (valable ssi labels_ind=True)</p>
-<ul>
-<li>valeur acceptée : True or None</li>
-<li>si True, une légende de correspondance entre index affiché sur le graphique et valeur réelle de la 
-variable d'observationb (en index) sera affichée sous le graphique</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>version_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td><p>prefixer les graphiques par un nom particulier</p>
-<ul>
-<li>
-<p>valeur acceptée : string qui prefixera le nom des graphiques </p>
-<pre><code>ex : si version_name = "test1" alors le graphique "Eboulis des valeurs propres se nommera 
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>[(0, 1)]</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>group</code></td>
+                                                <td>
+                                                    <code>str</code>
+                                                </td>
+                                                <td>
+                                                    <p>clustering</p>
+                                                    <ul>
+                                                        <li>valeur acceptée : nom de la colonne de groupe</li>
+                                                        <li>il faut donc que le df initial comporte cette colonne</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>group_special</code></td>
+                                                <td>
+                                                    <code>list</code>
+                                                </td>
+                                                <td>
+                                                    <p>liste d'individus constituant un groupe particulier (individus
+                                                        particuliers de la variable en index)</p>
+                                                    <ul>
+                                                        <li>valeur acceptée : liste d'individus</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>varSupp</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>variables illustratives quantitatives</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>valeur acceptée : df avec</p>
+                                                            <ul>
+                                                                <li>même nb de lignes que le df initial (les mêmes
+                                                                    individus)</li>
+                                                                <li>en colonnes les variables illustratives
+                                                                    quantitatives</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>varSuppQual</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>variables illustratives qualitatives</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>valeur acceptée : df avec</p>
+                                                            <ul>
+                                                                <li>même nb de lignes que le df initial (les mêmes
+                                                                    individus)</li>
+                                                                <li>en colonnes les variables illustratives qualitatives
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>labels</code></td>
+                                                <td>
+                                                    <code>boolean</code>
+                                                </td>
+                                                <td>
+                                                    <p>affichage des valeurs de la variable des observations (variable
+                                                        en index)</p>
+                                                    <ul>
+                                                        <li>valeur acceptée : True or None</li>
+                                                        <li>NB : si labels = True, alors labels_ind = False (ne choisir
+                                                            que 1 de ces 2 possibilités)</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>True</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>labels_ind</code></td>
+                                                <td>
+                                                    <code>boolean</code>
+                                                </td>
+                                                <td>
+                                                    <p>affichage de l'indice des valeurs de la variable des observations
+                                                        (variable en index)</p>
+                                                    <ul>
+                                                        <li>valeur acceptée : True or None</li>
+                                                        <li>NB : si labels_ind = True, alors labels = False (ne choisir
+                                                            que 1 de ces 2 possibilités)</li>
+                                                        <li>intérêt de cette option: facilite la lecture du graphique
+                                                            "Projection des individus", notamment si le
+                                                            nombre d'oservations (nombre de lignes) est important</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>legend_label</code></td>
+                                                <td>
+                                                    <code>boolean</code>
+                                                </td>
+                                                <td>
+                                                    <p>affichage des correspondances indice et valeur de la variable
+                                                        d'observation (valable ssi labels_ind=True)</p>
+                                                    <ul>
+                                                        <li>valeur acceptée : True or None</li>
+                                                        <li>si True, une légende de correspondance entre index affiché
+                                                            sur le graphique et valeur réelle de la
+                                                            variable d'observationb (en index) sera affichée sous le
+                                                            graphique</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>version_name</code></td>
+                                                <td>
+                                                    <code>str</code>
+                                                </td>
+                                                <td>
+                                                    <p>prefixer les graphiques par un nom particulier</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>valeur acceptée : string qui prefixera le nom des
+                                                                graphiques </p>
+                                                            <pre><code>ex : si version_name = "test1" alors le graphique "Eboulis des valeurs propres se nommera 
 "test1_recherche_nb_facteurs_optimal.png"
 </code></pre>
-</li>
-<li>
-<p>intérêt: enregistrer tous les graphiques de différentes versions d'une même ACP</p>
-</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>graph_only</code></td>
-          <td>
-                <code>boolean</code>
-          </td>
-          <td><p>afficher seulement les graphiques (cercle de corrélation et projection des individus)</p>
-<ul>
-<li>valeur acceptée : True or None</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>data_only</code></td>
-          <td>
-                <code>boolean</code>
-          </td>
-          <td><p>ne rien renvoyer lors de l'appel de la fonction</p>
-<ul>
-<li>valeur acceptée : True or None</li>
-<li>pour print un élément en particulier:<ul>
-<li>donner un nom à la fonction lors de l'appel
-    ex : resultat_acp = acp_perso(df, data_only=True)</li>
-<li>faire print(*resultat_acp)</li>
-</ul>
-</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>color_titles</code></td>
-          <td>
-                <code>list</code>
-          </td>
-          <td><p>liste de 3 couleurs au format hexadécimale (ex "#FFFFFF") pour les titres h2, h3, h4</p>
-<ul>
-<li>couleurs des titres par défaut : ["#b08c20", "#3aa237", "#29858a"]</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>palette_color</code></td>
-          <td>
-                <code>list</code>
-          </td>
-          <td><p>liste de couleurs au format hexadécimale (ex "#FFFFFF")pour les graphiques de l'ACP</p>
-<ul>
-<li>couleurs par défaut : ["#b30f1c", "#0e6667", "#3353e1", "#4ed147", "#d17e1a", "#2bb6b6",
-"#514a39", "#4ed147", "#acb073", "#8b3afd", "#dec11b", "#58f3e6", "#728e9d"]</li>
-</ul></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+                                                        </li>
+                                                        <li>
+                                                            <p>intérêt: enregistrer tous les graphiques de différentes
+                                                                versions d'une même ACP</p>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>graph_only</code></td>
+                                                <td>
+                                                    <code>boolean</code>
+                                                </td>
+                                                <td>
+                                                    <p>afficher seulement les graphiques (cercle de corrélation et
+                                                        projection des individus)</p>
+                                                    <ul>
+                                                        <li>valeur acceptée : True or None</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>data_only</code></td>
+                                                <td>
+                                                    <code>boolean</code>
+                                                </td>
+                                                <td>
+                                                    <p>ne rien renvoyer lors de l'appel de la fonction</p>
+                                                    <ul>
+                                                        <li>valeur acceptée : True or None</li>
+                                                        <li>pour print un élément en particulier:<ul>
+                                                                <li>donner un nom à la fonction lors de l'appel
+                                                                    ex : resultat_acp = acp_perso(df, data_only=True)
+                                                                </li>
+                                                                <li>faire print(*resultat_acp)</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>color_titles</code></td>
+                                                <td>
+                                                    <code>list</code>
+                                                </td>
+                                                <td>
+                                                    <p>liste de 3 couleurs au format hexadécimale (ex "#FFFFFF") pour
+                                                        les titres h2, h3, h4</p>
+                                                    <ul>
+                                                        <li>couleurs des titres par défaut : ["#b08c20", "#3aa237",
+                                                            "#29858a"]</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>palette_color</code></td>
+                                                <td>
+                                                    <code>list</code>
+                                                </td>
+                                                <td>
+                                                    <p>liste de couleurs au format hexadécimale (ex "#FFFFFF")pour les
+                                                        graphiques de l'ACP</p>
+                                                    <ul>
+                                                        <li>couleurs par défaut : ["#b30f1c", "#0e6667", "#3353e1",
+                                                            "#4ed147", "#d17e1a", "#2bb6b6",
+                                                            "#514a39", "#4ed147", "#acb073", "#8b3afd", "#dec11b",
+                                                            "#58f3e6", "#728e9d"]</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <code>None</code>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>val_centre_reduit</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>df centré-réduit</p></td>
-        </tr>
-        <tr>
-<td><code>valeurs_propres</code></td>          <td>
-                <code>list</code>
-          </td>
-          <td><p>valeurs propres</p></td>
-        </tr>
-        <tr>
-<td><code>pct_inertie_par_facteur</code></td>          <td>
-                <code>list</code>
-          </td>
-          <td><p>pourcentage d'inertie par facteur</p></td>
-        </tr>
-        <tr>
-<td><code>nb_groupes_opt</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td><p>path du graph "Eboulis des valeurs propres"</p></td>
-        </tr>
-        <tr>
-<td><code>test_batons_brises</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>df valeurs propres / valeurs de seuil par facteur</p></td>
-        </tr>
-        <tr>
-<td><code>coord_fact_ind</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>coordonnées factorielles des individus</p></td>
-        </tr>
-        <tr>
-<td><code>cos2_ind</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>cos² des individus pour chaque axe factoriel</p></td>
-        </tr>
-        <tr>
-<td><code>contribution_ind</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>df globale: contribution des individus aux axes</p></td>
-        </tr>
-        <tr>
-<td><code>ctr_ind_sorted_facteur_i</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>df par facteur: les plus gros contributeurs à l'axe i</p>
-<ul>
-<li>pour tous les facteurs i</li>
-</ul></td>
-        </tr>
-        <tr>
-<td><code>vecteurs_propres</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>vecteurs propres des variables par facteur</p></td>
-        </tr>
-        <tr>
-<td><code>matrice_cor</code></td>          <td>
-                <code>array</code>
-          </td>
-          <td><p>matrice des corrélations des variables par facteur</p></td>
-        </tr>
-        <tr>
-<td><code>cor_par_facteur</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>df de la matrice des corrélations                 </p></td>
-        </tr>
-        <tr>
-<td><code>cos2_var</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>cos² des variables par axe factoriel</p></td>
-        </tr>
-        <tr>
-<td><code>contribution_var</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>contribution des variables aux axes              </p></td>
-        </tr>
-        <tr>
-<td><code>cor_par_facteur_VarQttiveIllus</code></td>          <td>
-                <code>DataFrame</code>
-          </td>
-          <td><p>corrélations des variables quantitatives illustratives par axe</p></td>
-        </tr>
-        <tr>
-<td><code>resultats_tests</code></td>          <td>
-                <code>list</code>
-          </td>
-          <td><p>résultats des différents tests interes (1 if ok else 0)</p></td>
-        </tr>
-        <tr>
-<td><code>centroides_a_b</code></td>          <td>
-                <code>array</code>
-          </td>
-          <td><p>si clusters ou variable qualitative illustrative: coordonnées des centroïdes</p>
-<ul>
-<li>pour chaque plan factoriel [a,b]</li>
-</ul></td>
-        </tr>
-        <tr>
-<td><code>graph_proj_ind_a_b</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td><p>path du graph de projection des individus</p>
-<ul>
-<li>pour chaque plan factoriel [a,b]</li>
-</ul></td>
-        </tr>
-        <tr>
-<td><code>cercle_cor_a_b</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td><p>path du graph du cercle des corrélations</p>
-<ul>
-<li>pour chaque plan factoriel [a,b]</li>
-</ul></td>
-        </tr>
-        <tr>
-<td><code>graph_combo_a_b</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td><p>path du graph composé (cf. les 2 graphs précédents)</p>
-<ul>
-<li>pour chaque plan factoriel [a,b]</li>
-</ul></td>
-        </tr>
-        <tr>
-<td><code>select_obs</code></td>          <td>
-                <code>dict</code>
-          </td>
-          <td><p>dictionnaire :</p>
-<ul>
-<li>
-<p>key:</p>
-<ul>
-<li>si labels=True        alors valeurs de la variable d'observation</li>
-<li>si labels_ind = True  alors index des valeurs de la variable d'observation</li>
-</ul>
-</li>
-<li>
-<p>value:</p>
-<ul>
-<li>tuple composé de 2 df:<ul>
-<li>df données initiales de l'observation</li>
-<li>df données calculées pour cette observation<ul>
-<li>ses coordonnées factorielles</li>
-<li>sa qualité de représentation sur les différents axes (cf. COS²)</li>
-<li>sa contribution aux différents axes</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul></td>
-        </tr>
-    </tbody>
-  </table>
-  <p style="margin-bottom: 0!important;">Remarque : Un dossier se nommant "apc_graphs" est automatiquement créé lors de l'exécution de la fonction et contient les graphiques suivants :</p>
-  <ul>
-    <li>Eboulis des valeurs propres</li>
-    <li>Projection des individus sur les différents plans factoriels</li>
-    <li>Cercle des corrélations sur les différents plans factoriels</li>
-    </ul>
-      <details class="quote">
-        <summary>Source code in <code>generateACP\__init__.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  16</span>
+                                    <p><strong>Returns:</strong></p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>val_centre_reduit</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>df centré-réduit</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>valeurs_propres</code></td>
+                                                <td>
+                                                    <code>list</code>
+                                                </td>
+                                                <td>
+                                                    <p>valeurs propres</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>pct_inertie_par_facteur</code></td>
+                                                <td>
+                                                    <code>list</code>
+                                                </td>
+                                                <td>
+                                                    <p>pourcentage d'inertie par facteur</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>nb_groupes_opt</code></td>
+                                                <td>
+                                                    <code>str</code>
+                                                </td>
+                                                <td>
+                                                    <p>path du graph "Eboulis des valeurs propres"</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>test_batons_brises</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>df valeurs propres / valeurs de seuil par facteur</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>coord_fact_ind</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>coordonnées factorielles des individus</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>cos2_ind</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>cos² des individus pour chaque axe factoriel</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>contribution_ind</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>df globale: contribution des individus aux axes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>ctr_ind_sorted_facteur_i</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>df par facteur: les plus gros contributeurs à l'axe i</p>
+                                                    <ul>
+                                                        <li>pour tous les facteurs i</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>vecteurs_propres</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>vecteurs propres des variables par facteur</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>matrice_cor</code></td>
+                                                <td>
+                                                    <code>array</code>
+                                                </td>
+                                                <td>
+                                                    <p>matrice des corrélations des variables par facteur</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>cor_par_facteur</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>df de la matrice des corrélations </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>cos2_var</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>cos² des variables par axe factoriel</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>contribution_var</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>contribution des variables aux axes </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>cor_par_facteur_VarQttiveIllus</code></td>
+                                                <td>
+                                                    <code>DataFrame</code>
+                                                </td>
+                                                <td>
+                                                    <p>corrélations des variables quantitatives illustratives par axe
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>resultats_tests</code></td>
+                                                <td>
+                                                    <code>list</code>
+                                                </td>
+                                                <td>
+                                                    <p>résultats des différents tests interes (1 if ok else 0)</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>centroides_a_b</code></td>
+                                                <td>
+                                                    <code>array</code>
+                                                </td>
+                                                <td>
+                                                    <p>si clusters ou variable qualitative illustrative: coordonnées des
+                                                        centroïdes</p>
+                                                    <ul>
+                                                        <li>pour chaque plan factoriel [a,b]</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>graph_proj_ind_a_b</code></td>
+                                                <td>
+                                                    <code>str</code>
+                                                </td>
+                                                <td>
+                                                    <p>path du graph de projection des individus</p>
+                                                    <ul>
+                                                        <li>pour chaque plan factoriel [a,b]</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>cercle_cor_a_b</code></td>
+                                                <td>
+                                                    <code>str</code>
+                                                </td>
+                                                <td>
+                                                    <p>path du graph du cercle des corrélations</p>
+                                                    <ul>
+                                                        <li>pour chaque plan factoriel [a,b]</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>graph_combo_a_b</code></td>
+                                                <td>
+                                                    <code>str</code>
+                                                </td>
+                                                <td>
+                                                    <p>path du graph composé (cf. les 2 graphs précédents)</p>
+                                                    <ul>
+                                                        <li>pour chaque plan factoriel [a,b]</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>select_obs</code></td>
+                                                <td>
+                                                    <code>dict</code>
+                                                </td>
+                                                <td>
+                                                    <p>dictionnaire :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>key:</p>
+                                                            <ul>
+                                                                <li>si labels=True alors valeurs de la variable
+                                                                    d'observation</li>
+                                                                <li>si labels_ind = True alors index des valeurs de la
+                                                                    variable d'observation</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p>value:</p>
+                                                            <ul>
+                                                                <li>tuple composé de 2 df:<ul>
+                                                                        <li>df données initiales de l'observation</li>
+                                                                        <li>df données calculées pour cette observation
+                                                                            <ul>
+                                                                                <li>ses coordonnées factorielles</li>
+                                                                                <li>sa qualité de représentation sur les
+                                                                                    différents axes (cf. COS²)</li>
+                                                                                <li>sa contribution aux différents axes
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p style="margin-bottom: 0!important; text-align: justify!important;">Remarque : Un
+                                        dossier se nommant "apc_graphs" est automatiquement créé lors de l'exécution de
+                                        la fonction et contient les graphiques suivants :</p>
+                                    <ul style="margin-bottom:1.25rem !important;">
+                                        <li>Eboulis des valeurs propres</li>
+                                        <li>Projection des individus sur les différents plans factoriels</li>
+                                        <li>Cercle des corrélations sur les différents plans factoriels</li>
+                                    </ul>
+
+
+
+                                    <details class="quote">
+                                        <summary style="font-size:115%;">
+                                            Source code in <code>generateACP\__init__.py</code>
+                                        </summary>
+                                        <div class="highlight">
+                                            <table class="highlighttable">
+                                                <tr>
+                                                    <td class="linenos">
+                                                        <div class="linenodiv">
+                                                            <pre><span></span>
+<span class="normal">  16</span>
 <span class="normal">  17</span>
 <span class="normal">  18</span>
 <span class="normal">  19</span>
@@ -2334,7 +2498,12 @@ variable d'observationb (en index) sera affichée sous le graphique</li>
 <span class="normal">1723</span>
 <span class="normal">1724</span>
 <span class="normal">1725</span>
-<span class="normal">1726</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">acp_global</span><span class="p">(</span>
+<span class="normal">1726</span></pre>
+                                                        </div>
+                                                    </td>
+                                                    <td class="code">
+                                                        <div>
+                                                            <pre><span></span><code><span class="k">def</span> <span class="nf">acp_global</span><span class="p">(</span>
     <span class="n">df</span><span class="p">,</span>
     <span class="n">axis_ranks</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)],</span>
     <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -4045,85 +4214,115 @@ variable d'observationb (en index) sera affichée sous le graphique</li>
 <span class="s2">            un ou plusieurs problèmes ont été détectés</span><span class="se">\n</span><span class="s2">(voir la variable &#39;resultats_tests&#39; pour plus d&#39;infos)&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">all_values</span>
-</code></pre></div></td></tr></table></div>
-      </details>
-  </div>
+</code></pre>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </details>
+                                </div>
 
-</div>
+                            </div>
 
 
 
-  </div>
+                        </div>
 
-  </div>
+                    </div>
 
-</div><h2 id="4-exemple">4. Exemple</h2>
-<p>Exemple disponible au format html <a href="https://kopadata.fr/data/analyse_ACP_exemple.html" target="_blank">ICI</a></p>
-<h2 id="5-reference">5. Reference</h2>
-<ul>
-<li>Ricco Rakotomalala - <a href="https://tutoriels-data-mining.blogspot.com/2020/07/pratique-des-methodes-factorielles-avec.html">Pratique des Méthodes Factorielles avec Python</a></li>
-<li>François Husson - <a href="https://husson.github.io/img/cours_AnaDo_M2_intro.pdf">Rappels d’analyse factorielle</a></li>
-<li>Nicolas Rangeon - <a href="https://openclassrooms.com/fr/courses/4525281-realisez-une-analyse-exploratoire-de-donnees">Réalisez une analyse exploratoire de données</a></li>
-</ul>
-<h2 id="6-about">6. About</h2>
-<ul>
-<li>Created by <a href="mailto:kopatiktak@gmail.com">FredGainza</a> - <a href="https://github.com/FredGainza">GitHub</a> - <a href="https://fgainza.fr">WebSite</a></li>
-</ul></div>
-            </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js" defer></script>
-
-        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Touches</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Ouvrir l'aide</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Page suivante</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Page précédente</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Rechercher</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
+                </div>
+                <h2 id="4-exemple">4. Exemple</h2>
+                <p>Exemple d'utilisation diponible au format <a href="https://kopadata.fr/data/analyse_acp_exemple.html"
+                        target="blank">HTML</a> ou au format notebook&nbsp;:<br>
+                    &nbsp;&nbsp;&nbsp;- exemple exécuté dans le dossier <a
+                        href="https://github.com/FredGainza/generateACP/tree/main/docs" target="_blank">/doc/</a> du
+                    dépôt GitHub<br>
+                    &nbsp;&nbsp;&nbsp;- exemple à exécuter sur <a
+                        href="https://mybinder.org/v2/gh/FredGainza/generateACP.git/HEAD" target="_blank">binder</a> (se
+                    rendre dans le dossier /doc/ et lancer le notebook <em>binder_exemple_module_acp.ipynb</em>)
+                </p>
+                <h2 id="5-reference">5. Reference</h2>
+                <ul>
+                    <li>Ricco Rakotomalala - <a
+                            href="https://tutoriels-data-mining.blogspot.com/2020/07/pratique-des-methodes-factorielles-avec.html">Pratique
+                            des Méthodes Factorielles avec Python</a></li>
+                    <li>François Husson - <a href="https://husson.github.io/img/cours_AnaDo_M2_intro.pdf">Rappels
+                            d’analyse factorielle</a></li>
+                    <li>Nicolas Rangeon - <a
+                            href="https://openclassrooms.com/fr/courses/4525281-realisez-une-analyse-exploratoire-de-donnees">Réalisez
+                            une analyse exploratoire de données</a></li>
+                </ul>
+                <h2 id="6-about">6. About</h2>
+                <ul>
+                    <li>Created by <a href="mailto:kopatiktak@gmail.com">FredGainza</a> - <a
+                            href="https://github.com/FredGainza">GitHub</a> - <a href="https://fgainza.fr">WebSite</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
 
-    </body>
+    <footer class="col-md-12">
+        <hr>
+        <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+    </footer>
+    <script>
+        var base_url = ".",
+            shortcuts = {
+                "help": 191,
+                "next": 78,
+                "previous": 80,
+                "search": 83
+            };
+    </script>
+    <script src="js/base.js" defer></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Touches</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="help shortcut"><kbd>?</kbd></td>
+                                <td>Ouvrir l'aide</td>
+                            </tr>
+                            <tr>
+                                <td class="next shortcut"><kbd>n</kbd></td>
+                                <td>Page suivante</td>
+                            </tr>
+                            <tr>
+                                <td class="prev shortcut"><kbd>p</kbd></td>
+                                <td>Page précédente</td>
+                            </tr>
+                            <tr>
+                                <td class="search shortcut"><kbd>s</kbd></td>
+                                <td>Rechercher</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
 
 <!--
